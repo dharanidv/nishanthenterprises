@@ -1,0 +1,931 @@
+{
+  "category": "bags-travel-essentials",
+  "subCategories": [
+    {
+      "id": "laptop-backpack",
+      "name": "Laptop Backpack",
+      "image": "/nishanth_stock_images/Bags/Laptop Bag.png",
+      "bgColor": "bg-blue-600",
+      "products": [
+        {
+          "id": 6001,
+          "name": "E12 - BROWN LEATHERETTE",
+          "price": "₹850.00",
+          "originalPrice": "₹1000.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/6.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/6_png/BROWN_LEATHERETTE.jpg"
+          ],
+          "rating": 4.6,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Professional laptop backpack with multiple compartments"
+        },
+        {
+          "id": 6002,
+          "name": "AS23 - LAPTOP WITH DOUBLE BOTTLE & RAIN COVER",
+          "price": "₹950.00",
+          "originalPrice": "₹1100.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/7.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/7_png/3 pocket designer laptop bag.jpg"
+          ],
+          "rating": 4.8,
+          "reviews": 167,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Secure anti-theft laptop backpack with hidden zippers"
+        },
+        {
+          "id": 6003,
+          "name": "EF12 - JOURNEY MAKE BACKPACK",
+          "price": "₹875.00",
+          "originalPrice": "₹1000.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/8.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/8_png/F-12.jpg"
+          ],
+          "rating": 4.5,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Waterproof laptop backpack for all weather conditions"
+        },
+        {
+          "id": 6004,
+          "name": "AS60 - CLASSIC BACKPACK",
+          "price": "₹850.00",
+          "originalPrice": "₹1000.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/9.png",
+          "rating": 4.3,
+          "reviews": 76,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Slim and lightweight laptop backpack for daily use"
+        },
+        {
+          "id": 6005,
+          "name": "CAPE WATER PROOF LAPTOP BAG",
+          "price": "₹2360.00",
+          "originalPrice": "₹2500.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/10.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/10_png/cape.jpg"
+          ],
+          "rating": 4.7,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Professional corporate logo laptop backpack"
+        },
+        {
+          "id": 6006,
+          "name": "PF11 - POE BACKPACK",
+          "price": "₹980.00",
+          "originalPrice": "₹1100.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/11.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/11_png/F-11.jpg"
+          ],
+          "rating": 4.9,
+          "reviews": 89,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Luxury leather laptop backpack for executives"
+        },
+        {
+          "id": 6007,
+          "name": "PF5 - COMMUTER PRO",
+          "price": "₹945.00",
+          "originalPrice": "₹1050.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/12.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/12_png/File_20250805-234550.jpg"
+          ],
+          "rating": 4.4,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Spacious travel laptop backpack with extra storage"
+        },
+        {
+          "id": 6008,
+          "name": "FEATHER LITE",
+          "price": "₹880.00",
+          "originalPrice": "₹1000.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/13.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/13_png/feather lite.jpg"
+          ],
+          "rating": 4.6,
+          "reviews": 156,
+          "isNew": false,
+          "isBestSeller": true  ,
+          "description": "Specialized gaming laptop backpack with cooling features"
+        },
+        {
+          "id": 6009,
+          "name": "PE14 - DOCUMENT KEEPER",
+          "price": "₹980.00",
+          "originalPrice": "₹1099.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/14.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/14_png/FAUX LEATHER-PORTFOLIO BAG.jpg"
+          ],
+          "rating": 4.2,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Affordable student laptop backpack with book compartments"
+        },
+        {
+          "id": 6010,
+          "name": "AS27 - LAPTOP BACKPACK",
+          "price": "₹1150.00",
+          "originalPrice": "₹1300.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/15.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/15_png/laptip back with double bottle it.jpg"
+          ],
+          "rating": 4.8,
+          "reviews": 123,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Versatile convertible laptop backpack to shoulder bag"
+        },
+        {
+          "id": 6011,
+          "name": "PF6 - URBAN EXPLORER",
+          "price": "₹880.00",
+          "originalPrice": "₹1000.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/16.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/16_png/URBAN_EXPLORER.jpeg"
+          ],
+          "rating": 4.5,
+          "reviews": 87,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Compact laptop backpack with adjustable straps"
+        },
+        {
+          "id": 6012,
+          "name": "PE16 - BUFF CRUNCH LEATHER",
+          "price": "₹1980.00",
+          "originalPrice": "₹2200.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/17.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/17_png/PORTFOLIO BAG.jpeg"
+          ],
+          "rating": 4.7,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Eco-friendly laptop backpack made from sustainable materials"
+        },
+        {
+          "id": 6013,
+          "name": "PH1 - CANVAS WITH HANDLE",
+          "price": "₹650.00",
+          "originalPrice": "₹750.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/18.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/18_png/Laptop sleeve.jpg"
+          ],
+          "rating": 4.4,
+          "reviews": 87,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Waterproof laptop backpack with breathable mesh back"
+        },
+        {
+          "id": 6014,
+          "name": "SEGNO 2.0",
+          "price": "₹2299.00",
+          "originalPrice": "₹4598.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/19.png",
+          "rating": 4.9,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Premium travel laptop backpack with ergonomic design" 
+        },
+        {
+          "id": 6015,
+          "name": "TROT STYLE 01 - 3.0",
+          "price": "₹1499.00",
+          "originalPrice": "₹2998.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/20.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/20_png/Trot 3.0.jpg"
+          ],
+          "rating": 4.6,
+          "reviews": 105,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Waterproof laptop backpack with reinforced straps"
+        },
+        {
+          "id": 6016,
+          "name": "TROT STYLE 02 - 3.0",
+          "price": "₹1999.00",
+          "originalPrice": "₹3998.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/21.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/21_png/Trot 3.0 .jpg"
+          ],
+          "rating": 4.3,
+          "reviews": 89,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Laptop backpack with cooling system for high-performance laptops"
+        },
+       
+        {
+          "id": 6018,
+          "name": "M1 LAPTOP BACKPACK",
+          "price": "₹700.00",
+          "originalPrice": "₹800.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/23.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/23_png/M2.jpg",
+            "/bags_travel_essentials_extra_image/bags/secondary_images/23_png/M3 .jpg"
+          ],
+          "rating": 4.6,
+          "reviews": 105,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Waterproof laptop backpack with reinforced straps"
+        },
+        {
+          "id": 6021,
+          "name": "AS41 - CONVERTABLE SLING LAPTOP BAG",
+          "price": "₹1140.00",
+          "originalPrice": "₹1299.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/26.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/bags/secondary_images/26_png/Coco 2.jpg"
+          ],
+          "rating": 4.6,
+          "reviews": 105,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Waterproof laptop backpack with reinforced straps"
+        },
+        {
+          "id": 6023,
+          "name": "AS39 - SLING LAPTOP BAG",
+          "price": "₹890.00",
+          "originalPrice": "₹1000.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/28.png",
+          "rating": 4.8,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Premium laptop backpack with luxury features"
+        },
+        {
+          "id": 6024,
+          "name": "CANON Camera Backpack",
+          "price": "₹625.00",
+          "originalPrice": "₹1250.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/CANON.jpg",
+          "rating": 4.6,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "CANON branded backpack with camera-friendly compartments"
+        },
+        {
+          "id": 6025,
+          "name": "LinkedIn Professional Backpack",
+          "price": "₹675.00",
+          "originalPrice": "₹1350.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/Linkendin.jpg",
+          "rating": 4.5,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "LinkedIn branded backpack for professional networking"
+        },
+        {
+          "id": 6026,
+          "name": "Metlife Insurance Backpack",
+          "price": "₹695.00",
+          "originalPrice": "₹1390.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/Metlife.jpg",
+          "rating": 4.7,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Metlife branded backpack with modern laptop protection"
+        },
+        {
+          "id": 6027,
+          "name": "Range Rover Luxury Backpack",
+          "price": "₹1230.00",
+          "originalPrice": "₹2460.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/Range rover.jpg",
+          "rating": 4.8,
+          "reviews": 167,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Range Rover premium backpack for luxury travel"
+        },
+        {
+          "id": 6028,
+          "name": "Standard Chartered Corporate Backpack",
+          "price": "₹920.00",
+          "originalPrice": "₹1840.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/standard chartered.jpg",
+          "rating": 4.6,
+          "reviews": 123,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Standard Chartered corporate backpack for business professionals"
+        },
+        {
+          "id": 6029,
+          "name": "Tata EV Electric Vehicle Backpack",
+          "price": "₹795.00",
+          "originalPrice": "₹1590.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/tata ev.jpg",
+          "rating": 4.7,
+          "reviews": 156,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Tata EV themed backpack with electric vehicle design elements"
+        },
+        {
+          "id": 6030,
+          "name": "Vatsin Backpack",
+          "price": "₹410.00",
+          "originalPrice": "₹820.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/vatsin.jpeg",
+          "rating": 4.6,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Nvidia branded gaming laptop backpack for tech enthusiasts"
+        },
+        {
+          "id": 6031,
+          "name": "Rudition Backpack",
+          "price": "₹580.00",
+          "originalPrice": "₹1160.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/Rudition.jpeg",
+          "rating": 4.5,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Paytm branded digital wallet themed laptop backpack"
+        },
+        {
+          "id": 6032,
+          "name": "Paytm Backpack",
+          "price": "₹520.00",
+          "originalPrice": "₹780.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/bags/paytm_backpack.jpeg",
+          "rating": 4.5,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Paytm branded digital wallet themed laptop backpack"
+        }
+      ]
+    },
+    {
+      "id": "trolley-bags",
+      "name": "Trolley Bags",
+      "image": "/nishanth_stock_images/Bags/Trolley.png",
+      "bgColor": "bg-gray-600",
+      "products": [
+        {
+          "id": 7001,
+          "name": "LGT5 - TROPICAL GRID",
+          "price": "₹1800.00",
+          "originalPrice": "₹3600.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/30.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/trolley/secondary_images/30_png/tropical red.jpg"
+          ],
+          "rating": 4.7,
+          "reviews": 167,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Premium trolley bag with smooth rolling wheels"
+        },
+        {
+          "id": 7002,
+          "name": "LG13 - BOX SILVER",
+          "price": "₹2400.00",
+          "originalPrice": "₹4800.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/31.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/trolley/secondary_images/31_png/box sliver Luggero.jpg"
+          ],
+          "rating": 4.8,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Durable hard shell trolley bag for maximum protection"
+        },
+        {
+          "id": 7003,
+          "name": "LG17 - MINT GREEN",
+          "price": "₹2400.00",
+          "originalPrice": "₹4800.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/32.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/trolley/secondary_images/32_png/X track.jpg"
+          ],
+          "rating": 4.5,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Expandable trolley bag for extra packing space"
+        },
+        {
+          "id": 7004,
+          "name": "COMMUTER 2.0",
+          "price": "₹3600.00",
+          "originalPrice": "₹7200.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/33.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/trolley/secondary_images/33_png/commuter 2.0.jpg"
+          ],
+          "rating": 4.6,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Professional corporate logo trolley bag"
+        },
+        {
+          "id": 7005,
+          "name": "COLORADO",
+          "price": "₹3800.00",
+          "originalPrice": "₹7600.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/34.png",
+          "rating": 4.4,
+          "reviews": 87,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Ultra-lightweight trolley bag for easy handling"
+        },
+        {
+          "id": 7006,
+          "name": "LG11 - EXTREME RED",
+          "price": "₹2200.00",
+          "originalPrice": "₹4400.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/35.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/trolley/secondary_images/35_png/Luggero.jpg"
+          ],
+          "rating": 4.9,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Smooth 4-wheel trolley bag for effortless rolling"
+        },
+        {
+          "id": 7007,
+          "name": "VANITY CASE",
+          "price": "₹850.00",
+          "originalPrice": "₹1700.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/36.png",
+          "rating": 4.7,
+          "reviews": 156,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Complete travel trolley set with matching pieces"
+        },
+        {
+          "id": 7008,
+          "name": "CLASSIC VANITY CASE",
+          "price": "₹930.00",
+          "originalPrice": "₹1860.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/37.png",
+          "rating": 4.3,
+          "reviews": 76,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Professional business trolley for executives"
+        },
+        {
+          "id": 7009,
+          "name": "LG19 - CANDY YELLOW",
+          "price": "₹2350.00",
+          "originalPrice": "₹4700.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/38.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/trolley/secondary_images/38_png/flux.jpg"
+          ],
+          "rating": 4.9,
+          "reviews": 89,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Luxury leather trolley bag for premium travelers"
+        },
+        {
+          "id": 7010,
+          "name": "BABY TROLLEY",
+          "price": "₹1700.00",
+          "originalPrice": "₹3400.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/39.png",
+          "rating": 4.2,
+          "reviews": 65,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Compact trolley bag for short trips"
+        },
+        {
+          "id": 7011,
+          "name": "TRUCER DUO",
+          "price": "₹3389.00",
+          "originalPrice": "₹6778.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/40_.png",
+          "rating": 4.2,
+          "reviews": 65,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Compact trolley bag for short trips"
+        },
+        {
+          "id": 7012,
+          "name": "SKYLINE",
+          "price": "₹3800.00",
+          "originalPrice": "₹7600.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/trolley/41_.jpg",
+          "rating": 4.2,
+          "reviews": 65,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Compact trolley bag for short trips"
+        }
+      ]
+    },
+    {
+      "id": "travel-bags",
+      "name": "Travel Bags",
+      "image": "/nishanth_stock_images/Bags/Tavel Bag.png",
+      "bgColor": "bg-green-600",
+      "products": [
+        
+        {
+          "id": 8005,
+          "name": "TRAVEL BAG",
+          "price": "₹480.00",
+          "originalPrice": "₹550.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/travel_bags/45.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/travel-bags/secondary_images/45_png/IMG-20250729-WA0014.jpg"
+          ],
+          "rating": 4.9,
+          "reviews": 167,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Luxury travel bag with premium materials"
+        },
+        {
+          "id": 8007,
+          "name": "MULTI PURPOSE TRAVEL BAG",
+          "price": "₹1800.00",
+          "originalPrice": "₹2000.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/travel_bags/47.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/travel-bags/secondary_images/47_png/travel bag 1.jpg"
+          ],
+          "rating": 4.2,
+          "reviews": 76,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Compact travel bag for short trips"
+        },
+        {
+          "id": 8009,
+          "name": "MULTI PURPOSE SLING DUFFLE BAG CONVERT TO BACKPACK",
+          "price": "₹920.00",
+          "originalPrice": "₹1100.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/travel_bags/49.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/travel-bags/secondary_images/49_png/duffle bag 2.jpg"
+          ],
+          "rating": 4.7,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Durable premium canvas travel bag"
+        },
+        {
+          "id": 8011,
+          "name": "EXPLORER",
+          "price": "₹1299.00",
+          "originalPrice": "₹1400.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/travel_bags/51.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/travel-bags/secondary_images/51_png/Explorer.jpg"
+          ],
+          "rating": 4.9,
+          "reviews": 178,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Luxury travel bag with premium craftsmanship"
+        },
+        {
+          "id": 8012,
+          "name": "11 POCKET PREMIUM DUFFEL BAG",
+          "price": "₹1280.00",
+          "originalPrice": "₹1399.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/travel_bags/42_.jpg",
+          "rating": 4.9,
+          "reviews": 178,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Luxury travel bag with premium craftsmanship"
+        }
+      ]
+    },
+
+    {
+      "id": "sling-bags",
+      "name": "Sling Bags",
+      "image": "/bags_travel_essentials/sling_bags/41.png",
+      "bgColor": "bg-green-600",
+      "products": [
+        {
+          "id": 8001,
+          "name": "EG02 - LEATHER CROCO SLING BAG",
+          "price": "₹810.00",
+          "originalPrice": "₹1000.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/sling_bags/41.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/sling-bags/secondary_images/41.jpg",
+            "/bags_travel_essentials_extra_image/sling-bags/secondary_images/41_png/2.jpg"
+          ],
+          "rating": 4.5,
+          "reviews": 123,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Spacious duffel travel bag for weekend trips"
+        },
+        {
+          "id": 8002,
+          "name": "TG03 - CHESTER BAG LEATHERETTE",
+          "price": "₹780.00",
+          "originalPrice": "₹999.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/sling_bags/42.png",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/sling-bags/secondary_images/42_png/chester bag.jpg"
+          ],
+          "rating": 4.3,
+          "reviews": 87,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Perfect weekend travel bag with multiple pockets"
+        },
+        {
+          "id": 8003,
+          "name": "AS55 - PREMIUM TRAVEL SLING BAG WITH SIDE LOCK",
+          "price": "₹850.00",
+          "originalPrice": "₹1000.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/sling_bags/41.png",
+          "rating": 4.7,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Professional corporate travel bag for business trips"
+        },
+        {
+          "id": 8004,
+          "name": "TRAVEL SLING BAG",
+          "price": "₹429.00",
+          "originalPrice": "₹536.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/sling_bags/Nvidia.jpg",
+          "extraImages": [
+            "/bags_travel_essentials_extra_image/sling-bags/secondary_images/slide-bag.jpg",
+            "/bags_travel_essentials_extra_image/sling-bags/secondary_images/slide-bag_jpg/Bag.jpg"
+          ],
+          "rating": 4.7,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Professional corporate travel bag for business trips"
+        }
+      ]
+    },
+    {
+      "id": "card-holders",
+      "name": "Card Holders",
+      "image": "/nishanth_stock_images/Bags/Card Holder.png",
+      "bgColor": "bg-indigo-600",
+      "products": [
+        {
+          "id": 9001,
+          "name": "P3400 - Card Holder",
+          "price": "₹145.00",
+          "originalPrice": "₹199.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_1.jpg",
+          "rating": 4.6,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Classic card holder with multiple card slots"
+        },
+        {
+          "id": 9002,
+          "name": "P3413 - Card Holder",
+          "price": "₹145.00",
+          "originalPrice": "₹199.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_2.jpg",
+          "rating": 4.7,
+          "reviews": 167,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Premium card holder with leather finish"
+        },
+        {
+          "id": 9003,
+          "name": "P3408 - Card Holder",
+          "price": "₹155.00",
+          "originalPrice": "₹199.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_3.jpg",
+          "rating": 4.5,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Professional corporate card holder"
+        },
+        {
+          "id": 9004,
+          "name": "P3412 Card Holder",
+          "price": "₹145.00",
+          "originalPrice": "₹199.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_4.jpg",
+          "rating": 4.4,
+          "reviews": 87,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Ultra-slim card holder for minimalists"
+        },
+        {
+          "id": 9005,
+          "name": "CARD HOLDER",
+          "price": "₹160.00",
+          "originalPrice": "₹199.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_5.jpg",
+          "rating": 4.8,
+          "reviews": 203,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Luxury card holder with premium materials"
+        },
+        {
+          "id": 9007,
+          "name": "CARD HOLDER",
+          "price": "₹180.00",
+          "originalPrice": "₹249.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_7.jpg",
+          "rating": 4.7,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Executive card holder for professionals"
+        },
+        {
+          "id": 9009,
+          "name": "CARD HOLDER",
+          "price": "₹180.00",
+          "originalPrice": "₹249.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_9.jpg",
+          "rating": 4.2,
+          "reviews": 65,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Compact card holder for essential cards"
+        },
+        {
+          "id": 9010,
+          "name": "PH1106 - DUAL BUSINESS CARD HOLDER",
+          "price": "₹190.00",
+          "originalPrice": "₹299.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_12.jpg",
+          "rating": 4.2,
+          "reviews": 65,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Compact card holder for essential cards"
+        },
+        {
+          "id": 9011,
+          "name": "JCH26 - CARD HOLDER",
+          "price": "₹150.00",
+          "originalPrice": "₹199.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_new_1.jpeg",
+          "rating": 4.2,
+          "reviews": 65,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Compact card holder for essential cards"
+        },
+        {
+          "id": 9012,
+          "name": "JCH02 - CARD HOLDER",
+          "price": "₹145.00",
+          "originalPrice": "₹299.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_new_2.jpeg",
+          "rating": 4.2,
+          "reviews": 65,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Compact card holder for essential cards"
+        },
+        {
+          "id": 9013,
+          "name": "JCH21 - CARD HOLDER",
+          "price": "₹140.00",
+          "originalPrice": "₹299.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_new_3.jpeg",
+          "rating": 4.2,
+          "reviews": 65,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Compact card holder for essential cards"
+        },
+        {
+          "id": 9014,
+          "name": "JCH05 - CARD HOLDER",
+          "price": "₹125.00",
+          "originalPrice": "₹299.00",
+          "discount": "",
+          "image": "/bags_travel_essentials/card_holders/card_holder_new_4.jpeg",
+          "rating": 4.2,
+          "reviews": 65,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Compact card holder for essential cards"
+        }
+      ]
+    }
+  ]
+} 

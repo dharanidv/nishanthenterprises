@@ -1,0 +1,58 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Yogesh",
+      "position": "Customer",
+      "company": "India",
+      "rating": 5,
+      "text": "I recently purchased a T-shirt from my friend’s manufacturing company, Nishanth Enterprises, and I’m extremely satisfied with the experience. The quality is excellent, the fabric is very comfortable, and the color quality is vibrant and long-lasting. They also delivered 25 customised T-shirts within just 5 days, which shows their commitment and efficiency. All this at a very reasonable price — truly great value for money!",
+      "orderSize": "200 T-Shirts"
+    },
+    {
+      "id": 2,
+      "name": "Aysha Noor",
+      "position": "Customer",
+      "company": "Kerala,India",
+      "rating": 5,
+      "text": "I purchase 50 pieces of tshirt with embroidery at better price for my company it was good and the quality, GSM was nice , delivered on time (chennai to Kerala)",
+      "orderSize": "50+ T-Shirts"
+    },
+    {
+      "id": 3,
+      "name": "Velayudhan ks",
+      "position": "Customer",
+      "company": "India",
+      "rating": 5,
+      "text": "I purchased 80 pieces of t shirts it has a comfortable fit ,breathable fabric for daily wear. Its stitching and quality feel long lasting. thank you.",
+      "orderSize": "80+ T-Shirts"
+    },
+    {
+      "id": 4,
+      "name": "Swetha V",
+      "position": "Customer",
+      "company": "Kerala,India",
+      "rating": 5,
+      "text": "I bought 100 pieces of tshirt it was good quality and reasonable price, they provide the logo that I want.. and they deliver with in 5 days (Chennai to Kerala) with good package thank you so much.",
+      "orderSize": "100+ T-Shirts"
+    },
+    {
+      "id": 5,
+      "name": "E Saravanan",
+      "position": "Customer",
+      "company": "India",
+      "rating": 5,
+      "text": "I have purchased 30 tshirt for collage event, printing was nice and affordable price they are giving. Nice gsm also",
+      "orderSize": "30+ T-Shirts"
+    },
+    {
+      "id": 6,
+      "name": "SHANMUGAN",
+      "position": "Customer",
+      "company": "India",
+      "rating": 5,
+      "text": "I purchased 110 pieces of t shirt with good gsm , good quality. It was so comfortable they provide logo that I accounting to my wish.. thanks",
+      "orderSize": "110+ T-Shirts"
+    }
+  ]
+} 

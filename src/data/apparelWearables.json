@@ -1,0 +1,748 @@
+{
+  "category": "apparel-wearables",
+  "subCategories": [
+    {
+      "id": "corporate-tshirts-polo",
+      "name": "Polo T-Shirts",
+      "image": "/nishanth_stock_images/Apparels/Polo-Tees.png",
+      "bgColor": "bg-orange-500",
+      "products": [
+        {
+          "id": 1013,
+          "name": "Poly Cotton T-Shirt Collection",
+          "price": "₹300.00",
+          "originalPrice": "₹350.00",
+          "discount": "",
+          "image": "/apparel_wearables/Polo_Tshirts/Poly_cotton/black.png",
+          "rating": 4.8,
+          "reviews": 156,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Premium poly cotton polo collection with multiple color options",
+          "extraImages": [
+            "/apparel_wearables/Polo_Tshirts/Poly_cotton/bottle green.png",
+            "/apparel_wearables/Polo_Tshirts/Poly_cotton/grey.jpg",
+            "/apparel_wearables/Polo_Tshirts/Poly_cotton/maroon.jpg",
+            "/apparel_wearables/Polo_Tshirts/Poly_cotton/navy blue.png",
+            "/apparel_wearables/Polo_Tshirts/Poly_cotton/orange.jpg",
+            "/apparel_wearables/Polo_Tshirts/Poly_cotton/red.png",
+            "/apparel_wearables/Polo_Tshirts/Poly_cotton/sky blue.jpg",
+            "/apparel_wearables/Polo_Tshirts/Poly_cotton/white.png",
+            "/apparel_wearables/Polo_Tshirts/Poly_cotton/size chart.png"
+          ]
+        },
+        {
+          "id": 1001,
+          "name": "240 GSM Cotton T-Shirt",
+          "price": "₹390.00",
+          "originalPrice": "₹468.00",
+          "discount": "",
+          "image": "/apparel_wearables/Polo_Tshirts/black.jpg",
+          "rating": 4.5,
+          "reviews": 128,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Premium cotton polo t-shirt perfect for corporate wear"
+        },
+        {
+          "id": 1014,
+          "name": "Cotton Polo T-Shirt with Tipping Collection",
+          "price": "₹400.00",
+          "originalPrice": "₹500.00",
+          "discount": "",
+          "image": "/apparel_wearables/Polo_Tshirts/Polo_tshirt_plain_with_tipping/Black Polo t-shirt tipping.png",
+          "rating": 4.8,
+          "reviews": 178,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Premium polo t-shirt collection with tipping design in multiple colors",
+          "extraImages": [
+            "/apparel_wearables/Polo_Tshirts/Polo_tshirt_plain_with_tipping/grey.png",
+            "/apparel_wearables/Polo_Tshirts/Polo_tshirt_plain_with_tipping/Navy blue_.png",
+            "/apparel_wearables/Polo_Tshirts/Polo_tshirt_plain_with_tipping/sky Blue_.png",
+            "/apparel_wearables/Polo_Tshirts/Polo_tshirt_plain_with_tipping/White tipping polo tshirt.jpg"
+          ]
+        },
+        {
+          "id": 1015,
+          "name": "Puma Polo T-Shirt with Tipping",
+          "price": "₹799.00",
+          "originalPrice": "₹999.00",
+          "discount": "",
+          "image": "/apparel_wearables/Polo_Tshirts/puma_polo_tshirt_with_tipping/green.jpg",
+          "rating": 4.7,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Premium Puma polo t-shirt with tipping design in multiple colors",
+          "extraImages": [
+            "/apparel_wearables/Polo_Tshirts/puma_polo_tshirt_with_tipping/navy blue.jpg"
+          ]
+        },
+        {
+          "id": 1016,
+          "name": "Caslay Polo T-Shirt Collection",
+          "price": "₹750.00",
+          "originalPrice": "₹938.00",
+          "discount": "",
+          "image": "/apparel_wearables/Polo_Tshirts/casley_polo_tshirt/black.jpg",
+          "rating": 4.8,
+          "reviews": 167,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Premium Caslay polo t-shirt collection with multiple color options",
+          "extraImages": [
+            "/apparel_wearables/Polo_Tshirts/casley_polo_tshirt/carbon grey casaly.jpg",
+            "/apparel_wearables/Polo_Tshirts/casley_polo_tshirt/CaslayPurple.jpg",
+            "/apparel_wearables/Polo_Tshirts/casley_polo_tshirt/Collar tshirt cotton_.jpg",
+            "/apparel_wearables/Polo_Tshirts/casley_polo_tshirt/navy Caslay.jpg",
+            "/apparel_wearables/Polo_Tshirts/casley_polo_tshirt/Organic cotton_.jpg",
+            "/apparel_wearables/Polo_Tshirts/casley_polo_tshirt/Red Caslay.jpg",
+            "/apparel_wearables/Polo_Tshirts/casley_polo_tshirt/Royal blue casaly.jpg",
+            "/apparel_wearables/Polo_Tshirts/casley_polo_tshirt/white.jpg"
+          ]
+        },
+        {
+          "id": 1002,
+          "name": "Puma Polo T-Shirt",
+          "price": "₹810.00",
+          "originalPrice": "₹1013.00",
+          "discount": "",
+          "image": "/apparel_wearables/Polo_Tshirts/grey.jpg",
+          "rating": 4.3,
+          "reviews": 95,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Custom embroidered polo with company logo"
+        },
+        {
+          "id": 1004,
+          "name": "Addidas Polo T-Shirt",
+          "price": "₹880.00",
+          "originalPrice": "₹1100.00",
+          "discount": "",
+          "image": "/apparel_wearables/Polo_Tshirts/white.jpg",
+          "rating": 4.4,
+          "reviews": 87,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Modern slim fit polo for contemporary corporate style"
+        },
+        {
+          "id": 1005,
+          "name": "280 GSM Cotton T-Shirt",
+          "price": "₹580.00",
+          "originalPrice": "₹656.00",
+          "discount": "",
+          "image": "/apparel_wearables/Polo_Tshirts/280gsm_polo_tshirt.jpg",
+          "rating": 4.4,
+          "reviews": 87,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Modern slim fit polo for contemporary corporate style"
+        },
+        {
+          "id": 1006,
+          "name": "220 GSM Cotton T-Shirt",
+          "price": "₹350.00",
+          "originalPrice": "₹438.00",
+          "discount": "",
+          "image": "/apparel_wearables/Polo_Tshirts/220_gsm_Cotton_t_shirt.jpg",
+          "rating": 4.4,
+          "reviews": 87,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Modern slim fit polo for contemporary corporate style"
+        }
+
+      ]
+    },
+    {
+      "id": "tshirt-round-neck",
+      "name": "Round Neck T-Shirts",
+      "image": "/nishanth_stock_images/Apparels/Round-Neck.png",
+      "bgColor": "bg-blue-500",
+      "products": [
+        {
+          "id": 2001,
+          "name": "180 GSM Cotton T-Shirt",
+          "price": "₹220.00",
+          "originalPrice": "₹275.00",
+          "discount": "",
+          "image": "/apparel_wearables/Round_Neck/black.png",
+          "extraImages": [
+            "/apparel_wearables/Round_Neck/black_round_neck/grey.png",
+            "/apparel_wearables/Round_Neck/black_round_neck/Navy blue.png",
+            "/apparel_wearables/Round_Neck/black_round_neck/red.png",
+            "/apparel_wearables/Round_Neck/black_round_neck/White.jpg"
+          ],
+          "rating": 4.2,
+          "reviews": 89,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Comfortable round neck t-shirt for everyday wear in multiple colors"
+        },
+        {
+          "id": 2006,
+          "name": "220 GSM Round Neck T-Shirt",
+          "price": "₹260.00",
+          "originalPrice": "₹325.00",
+          "discount": "",
+          "image": "/apparel_wearables/Round_Neck/220 gsm .jpg",
+          "rating": 4.5,
+          "reviews": 87,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Premium 220 GSM round neck t-shirt with perfect fit"
+        },
+        {
+          "id": 2007,
+          "name": "Adidas Round Neck T-Shirt",
+          "price": "₹710.00",
+          "originalPrice": "₹813.00",
+          "discount": "",
+          "image": "/apparel_wearables/Round_Neck/Addidas tees.jpg",
+          "rating": 4.6,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Branded Adidas round neck t-shirt with dark logo design"
+        },
+        {
+          "id": 2008,
+          "name": "Caslay Round Neck T-Shirt",
+          "price": "₹510.00",
+          "originalPrice": "₹638.00",
+          "discount": "",
+          "image": "/apparel_wearables/Round_Neck/Caslay.jpg",
+          "rating": 4.4,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Premium Caslay round neck t-shirt in elegant grey"
+        },
+        {
+          "id": 2009,
+          "name": "Puma Round Neck T-Shirt",
+          "price": "₹591.00",
+          "originalPrice": "₹713.00",
+          "discount": "",
+          "image": "/apparel_wearables/Round_Neck/Puma.jpg",
+          "rating": 4.7,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Branded Puma round neck t-shirt with premium quality"
+        }
+      ]
+    },
+    {
+      "id": "hoodies",
+      "name": "Hoodies",
+      "image": "/nishanth_stock_images/Apparels/Hoodie.png",
+      "bgColor": "bg-gray-700",
+      "products": [
+        {
+          "id": 3001,
+          "name": "Hoody 280 GSM",
+          "price": "₹520.00",
+          "originalPrice": "₹780.00",
+          "discount": "",
+          "image": "/apparel_wearables/Hoodies/hoddie 1.1.jpg",
+          "rating": 4.6,
+          "reviews": 145,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Comfortable pullover hoodie for casual wear",
+          "extraImages": [
+            "/apparel_wearables/extra_images/Hoodies/hoddie1_1_jpg/hoddie 1.jpg"
+          ]
+        },
+        {
+          "id": 3002,
+          "name": "Hoody 320 GSM",
+          "price": "₹680.00",
+          "originalPrice": "₹850.00",
+          "discount": "",
+          "image": "/apparel_wearables/Hoodies/hoddie 2.1.jpg",
+          "rating": 4.4,
+          "reviews": 98,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Stylish zipper hoodie with front pocket",
+          "extraImages": [
+            "/apparel_wearables/extra_images/Hoodies/hoddie2_1_jpg/hoddie 2.jpg"
+          ]
+        },
+        {
+          "id": 3003,
+          "name": "Addidas",
+          "price": "₹2190.00",
+          "originalPrice": "₹4380.00",
+          "discount": "",
+          "image": "/apparel_wearables/Hoodies/addidas.jpg",
+          "rating": 4.8,
+          "reviews": 167,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Premium fleece hoodie for ultimate comfort",
+          "extraImages": [
+            "/apparel_wearables/extra_images/Hoodies/addidas_jpg/addisa back .jpg"
+          ]
+        },
+        {
+          "id": 3004,
+          "name": "Puma Hoody 260 GSM",
+          "price": "₹1590.00",
+          "originalPrice": "₹3180.00",
+          "discount": "",
+          "image": "/apparel_wearables/Hoodies/pum.jpg",
+          "rating": 4.3,
+          "reviews": 76,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Modern slim fit hoodie for contemporary style",
+          "extraImages": [
+            "/apparel_wearables/extra_images/Hoodies/pum_jpg/puma 1.jpg",
+            "/apparel_wearables/extra_images/Hoodies/pum_jpg/Puma.jpg"
+          ]
+        },
+        {
+          "id": 3005,
+          "name": "Caslay 320 GSM",
+          "price": "₹1190.00",
+          "originalPrice": "₹2380.00",
+          "discount": "",
+          "image": "/apparel_wearables/Hoodies/casley.jpg",
+          "rating": 4.3,
+          "reviews": 76,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Modern slim fit hoodie for contemporary style"
+        },
+        {
+          "id": 3006,
+          "name": "Caslay with Zippe 320 GSM",
+          "price": "₹1245.00",
+          "originalPrice": "₹2490.00",
+          "discount": "",
+          "image": "/apparel_wearables/Hoodies/casley_with_zippe.jpg",
+          "rating": 4.3,
+          "reviews": 76,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Modern slim fit hoodie with zipper for contemporary style"
+        }
+      ]
+    },
+    {
+      "id": "caps",
+      "name": "Caps",
+      "image": "/nishanth_stock_images/Apparels/Cap.png",
+      "bgColor": "bg-green-600",
+      "products": [
+      
+        {
+          "id": 4007,
+          "name": "Jeep Adventure Cap",
+          "price": "₹255.00",
+          "originalPrice": "₹319.00",
+          "discount": "",
+          "image": "/apparel_wearables/Caps/Jeep.jpg",
+          "rating": 4.5,
+          "reviews": 87,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Adventure Jeep cap for outdoor enthusiasts"
+        },
+        {
+          "id": 4008,
+          "name": "Abbott Premium Cap",
+          "price": "₹239.00",
+          "originalPrice": "₹299.00",
+          "discount": "",
+          "image": "/apparel_wearables/Caps/Abott.jpg",
+          "rating": 4.5,
+          "reviews": 89,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Classic Abbott cap with premium design"
+        },
+        {
+          "id": 4009,
+          "name": "Coca Cola Branded Cap",
+          "price": "₹250.00",
+          "originalPrice": "₹313.00",
+          "discount": "",
+          "image": "/apparel_wearables/Caps/Coco Cola.jpg",
+          "rating": 4.6,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Branded Coca Cola cap with iconic design"
+        },
+        {
+          "id": 4010,
+          "name": "NESPRESSO Coffee Cap",
+          "price": "₹255.00",
+          "originalPrice": "₹319.00",
+          "discount": "",
+          "image": "/apparel_wearables/Caps/NESPERSSO.jpg",
+          "rating": 4.7,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Premium NESPRESSO branded cap for coffee lovers"
+        },
+        {
+          "id": 4011,
+          "name": "NYU University Cap",
+          "price": "₹260.00",
+          "originalPrice": "₹325.00",
+          "discount": "",
+          "image": "/apparel_wearables/Caps/NYU.jpg",
+          "rating": 4.4,
+          "reviews": 78,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "NYU branded cap for university pride"
+        },
+        {
+          "id": 4012,
+          "name": "White Cap",
+          "price": "₹160.00",
+          "originalPrice": "₹200.00",
+          "discount": "",
+          "image": "/apparel_wearables/Caps/white .jpg",
+          "rating": 4.3,
+          "reviews": 71,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Clean white cap for minimalist style"
+        },
+        {
+          "id": 4013,
+          "name": "Navy Cap",
+          "price": "₹160.00",
+          "originalPrice": "₹200.00",
+          "discount": "",
+          "image": "/apparel_wearables/Caps/navy.jpg",
+          "rating": 4.3,
+          "reviews": 65,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Classic navy cap with timeless appeal"
+        },
+        {
+          "id": 4014,
+          "name": "Black Cap",
+          "price": "₹160.00",
+          "originalPrice": "₹200.00",
+          "discount": "",
+          "image": "/apparel_wearables/Caps/black.jpg",
+          "rating": 4.4,
+          "reviews": 76,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Elegant black cap for everyday wear"
+        },
+        {
+          "id": 4015,
+          "name": "Red Cap",
+          "price": "₹160.00",
+          "originalPrice": "₹200.00",
+          "discount": "",
+          "image": "/apparel_wearables/Caps/red.jpg",
+          "rating": 4.5,
+          "reviews": 82,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Bold red cap for vibrant style"
+        },        {
+          "id": 4003,
+          "name": "Green Cap",
+          "price": "₹160.00",
+          "originalPrice": "₹200.00",
+          "discount": "",
+          "image": "/apparel_wearables/Caps/ec2949c56fbb9f8a1a5e94d1c04ea2bd089e752a.jpg",
+          "rating": 4.7,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Premium snapback cap with structured fit"
+        }
+      ]
+    },
+    {
+      "id": "shirts",
+      "name": "Shirts",
+      "image": "/nishanth_stock_images/Apparels/Shirt.png",
+      "bgColor": "bg-purple-500",
+      "products": [
+        {
+          "id": 5001,
+          "name": "Classic  Formal Shirt",
+          "price": "₹599.00",
+          "originalPrice": "₹749.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shirts/black formal.jpg",
+          "rating": 4.6,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Classic oxford shirt for professional look"
+        },
+        {
+          "id": 5002,
+          "name": "Custom Button-Down Formal Shirt",
+          "price": "₹590.00",
+          "originalPrice": "₹1249.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shirts/Formal shirt .jpg",
+          "rating": 4.4,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Custom button-down shirt with your branding"
+        },
+        {
+          "id": 5003,
+          "name": "Premium Navy Blue Shirt",
+          "price": "₹645.00",
+          "originalPrice": "₹806.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shirts/navy blue formal.jpg",
+          "rating": 4.8,
+          "reviews": 156,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Premium dress shirt for formal occasions"
+        },
+        {
+          "id": 5004,
+          "name": "Casual White Linen Shirt",
+          "price": "₹750.00",
+          "originalPrice": "₹936.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shirts/white formal.jpg",
+          "rating": 4.3,
+          "reviews": 87,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Comfortable linen shirt for casual wear"
+        }
+      ]
+    },
+    {
+      "id": "shoes",
+      "name": "Shoes",
+      "image": "/nishanth_stock_images/Apparels/Shoes.png",
+      "bgColor": "bg-brown-600",
+      "products": [
+        {
+          "id": 6001,
+          "name": "Ballet Dance Shoes",
+          "price": "₹899.00",
+          "originalPrice": "₹1124.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shoes/Ballet.jpg",
+          "rating": 4.5,
+          "reviews": 123,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Elegant ballet shoes for formal occasions"
+        },
+        {
+          "id": 6002,
+          "name": "Camp Spunky Outdoor Shoes",
+          "price": "₹899.00",
+          "originalPrice": "₹1124.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shoes/Camp spunky.jpg",
+          "rating": 4.4,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Comfortable camp shoes for outdoor activities"
+        },
+        {
+          "id": 6003,
+          "name": "Chalk Casual Shoes",
+          "price": "₹899.00",
+          "originalPrice": "₹1124.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shoes/Chalk.jpg",
+          "rating": 4.6,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Stylish chalk shoes for casual wear"
+        },
+        {
+          "id": 6004,
+          "name": "JJ4517 Shoes",
+          "price": "₹1659.00",
+          "originalPrice": "₹2074.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shoes/JJ4517.jpg",
+          "rating": 4.7,
+          "reviews": 167,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Premium JJ4517 shoes with modern design"
+        },
+        {
+          "id": 6005,
+          "name": "JJ5330 Shoes",
+          "price": "₹1659.00",
+          "originalPrice": "₹2074.00",
+          "discount": "15",
+          "image": "/apparel_wearables/Shoes/JJ5330.jpg",
+          "rating": 4.8,
+          "reviews": 189,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Executive JJ5330 shoes for professional use"
+        },
+        {
+          "id": 6006,
+          "name": "JJ5331 Shoes",
+          "price": "₹1659.00",
+          "originalPrice": "₹2074.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shoes/Jj5331.jpg",
+          "rating": 4.9,
+          "reviews": 234,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Luxury JJ5331 shoes with premium finish"
+        },
+        {
+          "id": 6007,
+          "name": "OG 14 Shoes",
+          "price": "₹899.00",
+          "originalPrice": "₹1124.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shoes/OG 14.jpg",
+          "rating": 4.5,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Classic OG 14 shoes with timeless design"
+        },
+        {
+          "id": 6008,
+          "name": "Savy Shoes",
+          "price": "₹899.00",
+          "originalPrice": "₹1149.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shoes/Savy.jpg",
+          "rating": 4.6,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Smart Savy shoes for contemporary style"
+        },
+        {
+          "id": 6009,
+          "name": "Vesper Shoes",
+          "price": "₹899.00",
+          "originalPrice": "₹1499.00",
+          "discount": "",
+          "image": "/apparel_wearables/Shoes/Vesper.jpg",
+          "rating": 4.8,
+          "reviews": 178,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Premium Vesper shoes for distinguished users"
+        }
+      ]
+    },
+    {
+      "id": "jersey",
+      "name": "Jersey",
+      "image": "/nishanth_stock_images/Apparels/Jersey.png",
+      "bgColor": "bg-red-600",
+      "products": [
+        {
+          "id": 7001,
+          "name": "Basic Sports Jersey",
+          "price": "₹399.00",
+          "originalPrice": "₹499.00",
+          "discount": "",
+          "image": "/apparel_wearables/jersey/basic.jpeg",
+          "rating": 4.4,
+          "reviews": 87,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Comfortable basic jersey for everyday wear"
+        },
+        {
+          "id": 7002,
+          "name": "Premium Sports Jersey",
+          "price": "₹480.00",
+          "originalPrice": "₹561.00",
+          "discount": "",
+          "image": "/apparel_wearables/jersey/Basic.jpg",
+          "rating": 4.5,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Premium basic jersey with enhanced quality"
+        },
+        {
+          "id": 7003,
+          "name": "Full Set Sports Jersey",
+          "price": "₹950.00",
+          "originalPrice": "₹1125.00",
+          "discount": "",
+          "image": "/apparel_wearables/jersey/full set_.jpg",
+          "rating": 4.6,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Complete full set jersey for sports activities"
+        },
+        {
+          "id": 7004,
+          "name": "Elite Sports Jersey Set",
+          "price": "₹880.00",
+          "originalPrice": "₹1062.00",
+          "discount": "",
+          "image": "/apparel_wearables/jersey/jersery with trouser.jpg",
+          "rating": 4.7,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Jersey set with matching trousers for complete look"
+        },
+        {
+          "id": 7005,
+          "name": "Premium Sports Jersey Set",
+          "price": "₹679.00",
+          "originalPrice": "₹849.00",
+          "discount": "",
+          "image": "/apparel_wearables/jersey/jersey set.jpg",
+          "rating": 4.5,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Complete jersey set for team sports"
+        },
+        {
+          "id": 7007,
+          "name": "Elite Fabric Sports Jersey",
+          "price": "₹550.00",
+          "originalPrice": "₹675.00",
+          "discount": "",
+          "image": "/apparel_wearables/jersey/premium fabric jersey_.jpg",
+          "rating": 4.8,
+          "reviews": 156,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Premium fabric jersey with superior quality and comfort"
+        }
+      ]
+    }
+  ]
+} 

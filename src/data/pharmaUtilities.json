@@ -1,0 +1,381 @@
+{
+  "category": "pharma-utilities",
+  "subCategories": [
+    {
+      "id": "pill-organizers",
+      "name": "Pill Organizers",
+      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&h=200&fit=crop",
+      "bgColor": "bg-red-500",
+      "products": [
+        {
+          "id": 41001,
+          "name": "Weekly Pill Organizer",
+          "price": "₹299.00",
+          "originalPrice": "₹399.00",
+          "discount": "25",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.6,
+          "reviews": 78,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "7-day pill organizer with daily compartments"
+        },
+        {
+          "id": 41002,
+          "name": "Travel Pill Case",
+          "price": "₹199.00",
+          "originalPrice": "₹299.00",
+          "discount": "33",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.4,
+          "reviews": 56,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Compact travel pill organizer"
+        },
+        {
+          "id": 41003,
+          "name": "Premium Pill Organizer",
+          "price": "₹499.00",
+          "originalPrice": "₹599.00",
+          "discount": "17",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.7,
+          "reviews": 94,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Premium quality pill organizer with alarm"
+        }
+      ]
+    },
+    {
+      "id": "sanitizer-bottles",
+      "name": "Sanitizer Bottles",
+      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&h=200&fit=crop",
+      "bgColor": "bg-red-600",
+      "products": [
+        {
+          "id": 42001,
+          "name": "Hand Sanitizer Bottle",
+          "price": "₹199.00",
+          "originalPrice": "₹299.00",
+          "discount": "33",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.5,
+          "reviews": 67,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Portable hand sanitizer bottle"
+        },
+        {
+          "id": 42002,
+          "name": "Travel Sanitizer",
+          "price": "₹149.00",
+          "originalPrice": "₹199.00",
+          "discount": "25",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.3,
+          "reviews": 45,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Compact travel sanitizer bottle"
+        },
+        {
+          "id": 42003,
+          "name": "Premium Sanitizer",
+          "price": "₹299.00",
+          "originalPrice": "₹399.00",
+          "discount": "25",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.6,
+          "reviews": 83,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Premium hand sanitizer with moisturizer"
+        }
+      ]
+    },
+    {
+      "id": "first-aid-kits",
+      "name": "First Aid Kits",
+      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&h=200&fit=crop",
+      "bgColor": "bg-red-700",
+      "products": [
+        {
+          "id": 43001,
+          "name": "Basic First Aid Kit",
+          "price": "₹499.00",
+          "originalPrice": "₹699.00",
+          "discount": "29",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.7,
+          "reviews": 89,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Essential first aid kit for home"
+        },
+        {
+          "id": 43002,
+          "name": "Travel First Aid Kit",
+          "price": "₹399.00",
+          "originalPrice": "₹549.00",
+          "discount": "27",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.5,
+          "reviews": 67,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Compact travel first aid kit"
+        },
+        {
+          "id": 43003,
+          "name": "Premium First Aid Kit",
+          "price": "₹799.00",
+          "originalPrice": "₹999.00",
+          "discount": "20",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.8,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Comprehensive premium first aid kit"
+        }
+      ]
+    },
+    {
+      "id": "face-masks",
+      "name": "Face Masks",
+      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&h=200&fit=crop",
+      "bgColor": "bg-red-800",
+      "products": [
+        {
+          "id": 44001,
+          "name": "Surgical Face Masks",
+          "price": "₹199.00",
+          "originalPrice": "₹299.00",
+          "discount": "33",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.6,
+          "reviews": 78,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "3-ply surgical face masks pack"
+        },
+        {
+          "id": 44002,
+          "name": "N95 Face Masks",
+          "price": "₹299.00",
+          "originalPrice": "₹399.00",
+          "discount": "25",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.7,
+          "reviews": 94,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "N95 respirator face masks"
+        },
+        {
+          "id": 44003,
+          "name": "Reusable Face Masks",
+          "price": "₹399.00",
+          "originalPrice": "₹499.00",
+          "discount": "20",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.5,
+          "reviews": 67,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Washable reusable face masks"
+        }
+      ]
+    },
+    {
+      "id": "medical-pouches",
+      "name": "Medical Pouches",
+      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&h=200&fit=crop",
+      "bgColor": "bg-red-900",
+      "products": [
+        {
+          "id": 45001,
+          "name": "Medical Supply Pouch",
+          "price": "₹299.00",
+          "originalPrice": "₹399.00",
+          "discount": "25",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.5,
+          "reviews": 67,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Organized medical supply pouch"
+        },
+        {
+          "id": 45002,
+          "name": "Travel Medical Pouch",
+          "price": "₹249.00",
+          "originalPrice": "₹349.00",
+          "discount": "29",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.3,
+          "reviews": 45,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Compact travel medical pouch"
+        },
+        {
+          "id": 45003,
+          "name": "Premium Medical Pouch",
+          "price": "₹499.00",
+          "originalPrice": "₹599.00",
+          "discount": "17",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.7,
+          "reviews": 89,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Premium medical supply organizer"
+        }
+      ]
+    },
+    {
+      "id": "gloves",
+      "name": "Gloves",
+      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&h=200&fit=crop",
+      "bgColor": "bg-red-400",
+      "products": [
+        {
+          "id": 46001,
+          "name": "Disposable Gloves",
+          "price": "₹199.00",
+          "originalPrice": "₹299.00",
+          "discount": "33",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.6,
+          "reviews": 78,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Latex-free disposable gloves"
+        },
+        {
+          "id": 46002,
+          "name": "Nitrile Gloves",
+          "price": "₹299.00",
+          "originalPrice": "₹399.00",
+          "discount": "25",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.7,
+          "reviews": 94,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Premium nitrile examination gloves"
+        },
+        {
+          "id": 46003,
+          "name": "Vinyl Gloves",
+          "price": "₹249.00",
+          "originalPrice": "₹349.00",
+          "discount": "29",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.4,
+          "reviews": 56,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Comfortable vinyl gloves"
+        }
+      ]
+    },
+    {
+      "id": "temperature-strips",
+      "name": "Temperature Strips",
+      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&h=200&fit=crop",
+      "bgColor": "bg-red-300",
+      "products": [
+        {
+          "id": 47001,
+          "name": "Forehead Temperature Strips",
+          "price": "₹149.00",
+          "originalPrice": "₹199.00",
+          "discount": "25",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.5,
+          "reviews": 67,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Accurate forehead temperature strips"
+        },
+        {
+          "id": 47002,
+          "name": "Digital Temperature Strips",
+          "price": "₹299.00",
+          "originalPrice": "₹399.00",
+          "discount": "25",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.7,
+          "reviews": 89,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Digital temperature monitoring strips"
+        },
+        {
+          "id": 47003,
+          "name": "Premium Temperature Strips",
+          "price": "₹399.00",
+          "originalPrice": "₹499.00",
+          "discount": "20",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.6,
+          "reviews": 78,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "High-precision temperature strips"
+        }
+      ]
+    },
+    {
+      "id": "health-check-devices",
+      "name": "Health Check Devices",
+      "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=200&h=200&fit=crop",
+      "bgColor": "bg-red-200",
+      "products": [
+        {
+          "id": 48001,
+          "name": "Digital Thermometer",
+          "price": "₹599.00",
+          "originalPrice": "₹799.00",
+          "discount": "25",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.7,
+          "reviews": 94,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Accurate digital thermometer"
+        },
+        {
+          "id": 48002,
+          "name": "Blood Pressure Monitor",
+          "price": "₹1999.00",
+          "originalPrice": "₹2499.00",
+          "discount": "20",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.6,
+          "reviews": 78,
+          "isNew": true,
+          "isBestSeller": false,
+          "description": "Digital blood pressure monitor"
+        },
+        {
+          "id": 48003,
+          "name": "Pulse Oximeter",
+          "price": "₹899.00",
+          "originalPrice": "₹1099.00",
+          "discount": "18",
+          "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=400&fit=crop",
+          "rating": 4.8,
+          "reviews": 112,
+          "isNew": false,
+          "isBestSeller": true,
+          "description": "Finger pulse oximeter"
+        }
+      ]
+    }
+  ]
+} 
