@@ -1,0 +1,142 @@
+{
+  "mainMenus": [
+    {
+      "id": 1,
+      "name": "Home",
+      "link": "/",
+      "hasSubMenu": false
+    },
+    {
+      "id": 2,
+      "name": "Products",
+      "link": "/products?category=all",
+      "hasSubMenu": true,
+      "subCategories": [
+        {
+          "id": 1,
+          "name": "Apparel & Wearables",
+          "link": "/products?category=apparel-wearables",
+          "items": [
+            "Corporate T-Shirts Polo",
+            "T-Shirt Round Neck",
+            "Hoodies",
+            "Caps",
+            "Shirt",
+            "Shoes",
+            "Jersey"
+          ]
+        },
+        {
+          "id": 2,
+          "name": "Bags & Travel Essentials",
+          "link": "/products?category=bags-travel-essentials",
+          "items": [
+            "Laptop Backpack",
+            "Trolley Bags",
+            "Travel Bags",
+            "Sling Bags",
+            "Card Holders"
+          ]
+        },
+        {
+          "id": 3,
+          "name": "Eco Friendly Products",
+          "link": "/products?category=eco-friendly-products",
+          "items": [
+            "Cups and Flasks",
+            "Eco Friendly Gadgets",
+            "Note Book",
+            "Stationary Kit"
+          ]
+        },
+        {
+          "id": 4,
+          "name": "Drinkware & Kitchenware",
+          "link": "/products?category=drinkware-kitchenware",
+          "items": [
+            "Cups and Mugs",
+            "Shakers",
+            "Tiffin Boxes",
+            "Vacuum Flasks"
+          ]
+        },
+
+        
+        {
+          "id": 5,
+          "name": "Seasonal Products",
+          "link": "/products?category=seasonal-products",
+          "items": [
+            "Umbrella",
+            "Rain Coat"
+          ]
+        },
+        {
+          "id": 6,
+          "name": "Awards & Recognition",
+          "link": "/products?category=awards-recognition",
+          "items": [
+            "Medals",
+            "Trophies",
+            "Memntos & Plaques",
+            "Acrylic Trophies"
+          ]
+        },
+        {
+          "id": 7,
+          "name": "Gadgets & Accessories",
+          "link": "/products?category=gadgets-accessories",
+          "items": [
+            "Bluetooth Speakers",
+            "Power Banks",
+            "Air Pods",
+            "Smart Watches",
+            "Wrist Watches",
+            "Bands",
+            "Pen Drives",
+            "Accessories",
+            "Clocks"
+          ]
+        },
+        {
+          "id": 8,
+          "name": "Premium Gift Sets",
+          "link": "/products?category=premium-gift-sets",
+          "items": [
+            "Executive Gift Sets",
+            "Tech Gifts",
+            "Welcome Gifts"
+          ]
+        },
+
+        {
+          "id": 9,
+          "name": "Writing & Stationery",
+          "link": "/products?category=writing-stationery",
+          "items": [
+            "Metal Pens",
+            "Plastic Pens",
+            "A5 Note Books",
+            "A6 Note Books",
+            "Organizers",
+            "Diaries",
+            "Desk Organizers",
+            "Keychain"
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "About Us",
+      "link": "/about",
+      "hasSubMenu": false
+    },
+    {
+      "id": 4,
+      "name": "Contact Us",
+      "link": "/contact",
+      "hasSubMenu": false
+    }
+  ]
+} 

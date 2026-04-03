@@ -1,0 +1,253 @@
+{
+  "info": {
+    "name": "Nishanth CMS — Catalog (categories & products)",
+    "description": "REST APIs for **categories**, **subcategories**, **products**, and **product images**. All routes require `Authorization: Bearer {{token}}`.\n\n**Hierarchy:** category → subcategory → product.\n\n**Image uploads:** `POST {{base_url}}/api/products/{{product_id}}/images` — form-data: `images` (multiple). Max **1 MB** each; **jpg, jpeg, png**. Stored under `assets/{category-slug}/{subcategory-slug}/{product-slug}/`.\n\n**Filters (GET /api/products):** `subcategory_id` (narrowest), else `category_id`, plus `is_new_product`, `is_popular_product`, `classification` (`classification=null` for NULL), `include_images=true`.\n\n**Responses:** `{ \"success\": true, \"data\": ... }` or `{ \"error\": \"...\" }`.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4000" },
+    { "key": "token", "value": "" },
+    { "key": "category_id", "value": "1" },
+    { "key": "subcategory_id", "value": "1" },
+    { "key": "product_id", "value": "1" },
+    { "key": "product_image_id", "value": "1" }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+  },
+  "item": [
+    {
+      "name": "Auth (copy token)",
+      "item": [
+        {
+          "name": "POST Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "try {",
+                  "  const j = pm.response.json();",
+                  "  if (j.token) pm.collectionVariables.set('token', j.token);",
+                  "} catch (e) {}",
+                  "pm.test('Status 200', () => pm.response.to.have.status(200));"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "auth": { "type": "noauth" },
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"your-password\"\n}"
+            },
+            "url": "{{base_url}}/api/auth/login"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Categories",
+      "item": [
+        {
+          "name": "GET List categories",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/categories" }
+        },
+        {
+          "name": "POST Create category",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"category_name\": \"Beverages\"\n}"
+            },
+            "url": "{{base_url}}/api/categories"
+          }
+        },
+        {
+          "name": "GET Category by id",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/categories/{{category_id}}" }
+        },
+        {
+          "name": "PUT Update category",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"category_name\": \"Beverages & snacks\"\n}"
+            },
+            "url": "{{base_url}}/api/categories/{{category_id}}"
+          }
+        },
+        {
+          "name": "DELETE Category",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{base_url}}/api/categories/{{category_id}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Subcategories",
+      "item": [
+        {
+          "name": "GET List subcategories (all or by category)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/subcategories?category_id={{category_id}}",
+              "host": ["{{base_url}}"],
+              "path": ["api", "subcategories"],
+              "query": [{ "key": "category_id", "value": "{{category_id}}", "disabled": true }]
+            }
+          }
+        },
+        {
+          "name": "POST Create subcategory",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"subcategory_name\": \"Iced drinks\",\n  \"category_id\": {{category_id}}\n}"
+            },
+            "url": "{{base_url}}/api/subcategories"
+          }
+        },
+        {
+          "name": "GET Subcategory by id",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/subcategories/{{subcategory_id}}" }
+        },
+        {
+          "name": "PUT Update subcategory",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"subcategory_name\": \"Cold drinks\",\n  \"category_id\": {{category_id}}\n}"
+            },
+            "url": "{{base_url}}/api/subcategories/{{subcategory_id}}"
+          }
+        },
+        {
+          "name": "DELETE Subcategory",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{base_url}}/api/subcategories/{{subcategory_id}}"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "GET List products (all filters optional)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/products?subcategory_id={{subcategory_id}}&category_id={{category_id}}&is_new_product=true&is_popular_product=false&classification=inhouse&include_images=true",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products"],
+              "query": [
+                { "key": "subcategory_id", "value": "{{subcategory_id}}", "disabled": true },
+                { "key": "category_id", "value": "{{category_id}}", "disabled": true },
+                { "key": "is_new_product", "value": "true", "disabled": true },
+                { "key": "is_popular_product", "value": "false", "disabled": true },
+                { "key": "classification", "value": "inhouse", "disabled": true },
+                { "key": "classification", "value": "null", "description": "Filter products with NULL classification", "disabled": true },
+                { "key": "include_images", "value": "true", "disabled": true }
+              ]
+            }
+          }
+        },
+        {
+          "name": "POST Create product",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"product_name\": \"Cold brew\",\n  \"subcategory_id\": {{subcategory_id}},\n  \"description\": \"Smooth cold coffee.\",\n  \"original_price\": 120,\n  \"offer_price\": 99.5,\n  \"classification\": \"cold\",\n  \"is_new_product\": true,\n  \"is_popular_product\": false\n}"
+            },
+            "url": "{{base_url}}/api/products"
+          }
+        },
+        {
+          "name": "GET Product by id (includes images[])",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/products/{{product_id}}" }
+        },
+        {
+          "name": "PUT Update product (partial JSON)",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"offer_price\": 89,\n  \"classification\": null,\n  \"is_popular_product\": true\n}"
+            },
+            "url": "{{base_url}}/api/products/{{product_id}}"
+          }
+        },
+        {
+          "name": "DELETE Product",
+          "request": { "method": "DELETE", "header": [], "url": "{{base_url}}/api/products/{{product_id}}" }
+        }
+      ]
+    },
+    {
+      "name": "Product images",
+      "item": [
+        {
+          "name": "GET List images for product",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/products/{{product_id}}/images" }
+        },
+        {
+          "name": "POST Upload multiple images (form-data)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "images",
+                  "type": "file",
+                  "src": [],
+                  "description": "Add multiple rows with same key 'images' or select multiple files in Postman"
+                },
+                {
+                  "key": "images",
+                  "type": "file",
+                  "src": [],
+                  "description": "Second file (optional)"
+                }
+              ]
+            },
+            "url": "{{base_url}}/api/products/{{product_id}}/images"
+          }
+        },
+        {
+          "name": "DELETE One product image",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": "{{base_url}}/api/products/{{product_id}}/images/{{product_image_id}}"
+          }
+        }
+      ]
+    }
+  ]
+}

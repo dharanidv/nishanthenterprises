@@ -1,0 +1,279 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Collar Neck T-shirt",
+      "link": "/products/collar-neck-tshirt",
+      "products": [
+        {
+          "id": 1,
+          "name": "Classic Collar Neck T-shirt",
+          "currentPrice": "₹1,299.00",
+          "originalPrice": "₹1,599.00",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 2,
+          "name": "Premium Collar Neck T-shirt",
+          "currentPrice": "₹1,499.00",
+          "originalPrice": "₹1,899.00",
+          "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop",
+          "isNew": false
+        },
+        {
+          "id": 3,
+          "name": "Sport Collar Neck T-shirt",
+          "currentPrice": "₹1,799.00",
+          "originalPrice": "₹2,199.00",
+          "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 4,
+          "name": "Casual Collar Neck T-shirt",
+          "currentPrice": "₹1,399.00",
+          "originalPrice": "₹1,699.00",
+          "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop",
+          "isNew": false
+        },
+        {
+          "id": 5,
+          "name": "Formal Collar Neck T-shirt",
+          "currentPrice": "₹1,899.00",
+          "originalPrice": "₹2,299.00",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 6,
+          "name": "Designer Collar Neck T-shirt",
+          "currentPrice": "₹2,199.00",
+          "originalPrice": "₹2,599.00",
+          "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop",
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Round Neck T-shirt",
+      "link": "/products/round-neck-tshirt",
+      "products": [
+        {
+          "id": 7,
+          "name": "Classic Round Neck T-shirt",
+          "currentPrice": "₹999.00",
+          "originalPrice": "₹1,299.00",
+          "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 8,
+          "name": "Premium Round Neck T-shirt",
+          "currentPrice": "₹1,199.00",
+          "originalPrice": "₹1,499.00",
+          "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop",
+          "isNew": false
+        },
+        {
+          "id": 9,
+          "name": "Sport Round Neck T-shirt",
+          "currentPrice": "₹1,399.00",
+          "originalPrice": "₹1,799.00",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 10,
+          "name": "Casual Round Neck T-shirt",
+          "currentPrice": "₹1,099.00",
+          "originalPrice": "₹1,399.00",
+          "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop",
+          "isNew": false
+        },
+        {
+          "id": 11,
+          "name": "Fashion Round Neck T-shirt",
+          "currentPrice": "₹1,599.00",
+          "originalPrice": "₹1,999.00",
+          "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 12,
+          "name": "Designer Round Neck T-shirt",
+          "currentPrice": "₹1,899.00",
+          "originalPrice": "₹2,299.00",
+          "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop",
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Jerseys",
+      "link": "/products/jerseys",
+      "products": [
+        {
+          "id": 13,
+          "name": "Sports Jersey T-shirt",
+          "currentPrice": "₹1,599.00",
+          "originalPrice": "₹1,999.00",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 14,
+          "name": "Football Jersey T-shirt",
+          "currentPrice": "₹1,799.00",
+          "originalPrice": "₹2,199.00",
+          "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop",
+          "isNew": false
+        },
+        {
+          "id": 15,
+          "name": "Basketball Jersey T-shirt",
+          "currentPrice": "₹1,699.00",
+          "originalPrice": "₹2,099.00",
+          "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 16,
+          "name": "Cricket Jersey T-shirt",
+          "currentPrice": "₹1,899.00",
+          "originalPrice": "₹2,299.00",
+          "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop",
+          "isNew": false
+        },
+        {
+          "id": 17,
+          "name": "Custom Jersey T-shirt",
+          "currentPrice": "₹2,199.00",
+          "originalPrice": "₹2,599.00",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 18,
+          "name": "Team Jersey T-shirt",
+          "currentPrice": "₹2,499.00",
+          "originalPrice": "₹2,899.00",
+          "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop",
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Shirts",
+      "link": "/products/shirts",
+      "products": [
+        {
+          "id": 19,
+          "name": "Classic Formal Shirt",
+          "currentPrice": "₹1,899.00",
+          "originalPrice": "₹2,299.00",
+          "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 20,
+          "name": "Casual Shirt",
+          "currentPrice": "₹1,599.00",
+          "originalPrice": "₹1,999.00",
+          "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop",
+          "isNew": false
+        },
+        {
+          "id": 21,
+          "name": "Business Shirt",
+          "currentPrice": "₹2,199.00",
+          "originalPrice": "₹2,599.00",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 22,
+          "name": "Designer Shirt",
+          "currentPrice": "₹2,499.00",
+          "originalPrice": "₹2,899.00",
+          "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop",
+          "isNew": false
+        },
+        {
+          "id": 23,
+          "name": "Premium Shirt",
+          "currentPrice": "₹2,799.00",
+          "originalPrice": "₹3,199.00",
+          "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 24,
+          "name": "Luxury Shirt",
+          "currentPrice": "₹3,199.00",
+          "originalPrice": "₹3,599.00",
+          "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop",
+          "isNew": false
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Corporate Gifts",
+      "link": "/corporate-gifts",
+      "products": [
+        {
+          "id": 25,
+          "name": "Tech Gift Bundle",
+          "currentPrice": "₹2,999.00",
+          "originalPrice": "₹3,599.00",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 26,
+          "name": "Wellness Gift Set",
+          "currentPrice": "₹2,499.00",
+          "originalPrice": "₹2,999.00",
+          "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop",
+          "isNew": false
+        },
+        {
+          "id": 27,
+          "name": "Office Essentials Kit",
+          "currentPrice": "₹1,899.00",
+          "originalPrice": "₹2,299.00",
+          "image": "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 28,
+          "name": "Luxury Gift Hamper",
+          "currentPrice": "₹4,999.00",
+          "originalPrice": "₹5,999.00",
+          "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop",
+          "isNew": false
+        },
+        {
+          "id": 29,
+          "name": "Eco-Friendly Gift Set",
+          "currentPrice": "₹2,199.00",
+          "originalPrice": "₹2,599.00",
+          "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+          "isNew": true
+        },
+        {
+          "id": 30,
+          "name": "Executive Gift Collection",
+          "currentPrice": "₹3,999.00",
+          "originalPrice": "₹4,599.00",
+          "image": "https://images.unsplash.com/photo-1503341504253-dff4815485f1?w=400&h=400&fit=crop",
+          "isNew": false
+        }
+      ]
+    }
+  ]
+} 

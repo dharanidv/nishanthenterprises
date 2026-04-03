@@ -1,0 +1,177 @@
+{
+  "category": "seasonal-products",
+  "categoryName": "Seasonal Products",
+  "mainImage": "/nishanth_stock_images/Seasonal_Products/Seasonal_Products.png",
+  "subCategories": [
+    {
+      "id": "umbrella",
+      "name": "Umbrella",
+      "image": "/nishanth_stock_images/Seasonal_Products/umbrella.png",
+      "products": [
+        {
+          "id": 1,
+          "name": "21 Inch Umbrella",
+          "price": "₹220.00",
+          "originalPrice": "₹275.00",
+          "discount": "",
+          "image": "/seasonal_products/umbrella/2.1.jpg",
+          "rating": 4.7,
+          "reviews": 89,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "21 inch umbrella with high-quality design and custom branding options"
+        },
+        {
+          "id": 2,
+          "name": "Automatic Open Umbrella",
+          "price": "₹280.00",
+          "originalPrice": "₹350.00",
+          "discount": "",
+          "image": "/seasonal_products/umbrella/Bottle umbrella.jpg",
+          "rating": 4.8,
+          "reviews": 156,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Automatic open umbrella with convenient opening mechanism and wind resistance"
+        },
+        {
+          "id": 3,
+          "name": "2 Fold Auto Open Umbrella",
+          "price": "₹220.00",
+          "originalPrice": "₹275.00",
+          "discount": "",
+          "image": "/seasonal_products/umbrella/Navy blue.jpg",
+          "rating": 4.6,
+          "reviews": 234,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "2 fold auto open umbrella lightweight and portable perfect for travel"
+        },
+        {
+          "id": 4,
+          "name": "M Pocket Umbrella",
+          "price": "₹310.00",
+          "originalPrice": "₹388.00",
+          "discount": "",
+          "image": "/seasonal_products/umbrella/umbrella2.jpg",
+          "rating": 4.6,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "M pocket umbrella with sustainable materials and compact design"
+        },
+        {
+          "id": 5,
+          "name": "M 5 Fold Umbrella",
+          "price": "₹240.00",
+          "originalPrice": "₹300.00",
+          "discount": "",
+          "image": "/seasonal_products/umbrella/umbrella1.jpg",
+          "rating": 4.6,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "M 5 fold umbrella with sustainable materials and compact folding design"
+        }
+      ]
+    },
+    {
+      "id": "rain-coat",
+      "name": "Rain Coat",
+      "image": "/nishanth_stock_images/Seasonal_Products/rain_coat.png",
+      "products": [
+        {
+          "id": 8,
+          "name": "Mens Rain Wear",
+          "price": "₹410.00",
+          "originalPrice": "₹513.00",
+          "discount": "",
+          "image": "/seasonal_products/rain_coat/Duckback 1.jpg",
+          "rating": 4.8,
+          "reviews": 145,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Mens rain wear with high-quality waterproof fabric and breathable design"
+        },
+        {
+          "id": 9,
+          "name": "Solid Mens Raincoat",
+          "price": "₹780.00",
+          "originalPrice": "₹975.00",
+          "discount": "",
+          "image": "/seasonal_products/rain_coat/Duckback .jpg",
+          "rating": 4.6,
+          "reviews": 189,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Solid mens raincoat with ultra-lightweight design perfect for rain protection"
+        },
+        {
+          "id": 10,
+          "name": "Water Resistant Bomber",
+          "price": "₹1300.00",
+          "originalPrice": "₹1625.00",
+          "discount": "",
+          "image": "/seasonal_products/rain_coat/File_20250813-225602.jpg",
+          "rating": 4.9,
+          "reviews": 98,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Water resistant bomber jacket with professional design and company branding options"
+        },
+        {
+          "id": 11,
+          "name": "Rain Coat",
+          "price": "₹490.00",
+          "originalPrice": "₹613.00",
+          "discount": "",
+          "image": "/seasonal_products/rain_coat/jerkin 1.jpg",
+          "rating": 4.7,
+          "reviews": 156,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Rain coat with complete design including hood and pants"
+        },
+        {
+          "id": 12,
+          "name": "Plutus Raincoat",
+          "price": "₹580.00",
+          "originalPrice": "₹725.00",
+          "discount": "",
+          "image": "/seasonal_products/rain_coat/Plutus .jpg",
+          "rating": 4.8,
+          "reviews": 87,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Plutus raincoat durable design with multiple pockets"
+        },
+        {
+          "id": 13,
+          "name": "Wildcraft Raincoat",
+          "price": "₹950.00",
+          "originalPrice": "₹1188.00",
+          "discount": "",
+          "image": "/seasonal_products/rain_coat/Wildcraft.jpg",
+          "rating": 4.6,
+          "reviews": 134,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Wildcraft raincoat stylish design that doesn't compromise on protection"
+        },
+        {
+          "id": 14,
+          "name": "Full Kit",
+          "price": "₹980.00",
+          "originalPrice": "₹1225.00",
+          "discount": "",
+          "image": "/seasonal_products/rain_coat/Duckback 1.jpg",
+          "rating": 4.5,
+          "reviews": 267,
+          "isNew": false,
+          "isBestSeller": false,
+          "description": "Full kit rain cover for complete weather protection"
+        }
+      ]
+    }
+  ]
+} 

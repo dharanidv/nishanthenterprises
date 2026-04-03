@@ -1,0 +1,364 @@
+{
+  "info": {
+    "name": "Nishanth CMS API",
+    "description": "REST API for pages, page_section, and page_images. Set `base_url` and run **Auth > Login** (saves `token`). Protected routes use Bearer {{token}}.\n\n**Image upload:** `POST {{base_url}}/api/page-images/upload` — form-data: `section_id` (text), `image` (file). Max 1 MB; jpg, jpeg, png only. Files are stored under `assets/{page-slug}/{section-slug}/` and `image_url` in DB is the path relative to the assets root.\n\n**Sample success shape:** `{ \"success\": true, \"data\": { ... } }`",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "http://localhost:4000" },
+    { "key": "token", "value": "" },
+    { "key": "page_id", "value": "1" },
+    { "key": "section_id", "value": "1" },
+    { "key": "image_id", "value": "1" }
+  ],
+  "item": [
+    {
+      "name": "Public",
+      "item": [
+        {
+          "name": "GET Health",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/health"
+          },
+          "response": [
+            {
+              "name": "200 OK",
+              "originalRequest": { "method": "GET", "header": [], "url": "{{base_url}}/api/health" },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "body": "{\n  \"status\": \"ok\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "POST Login",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "try {",
+                  "  const j = pm.response.json();",
+                  "  if (j.token) pm.collectionVariables.set('token', j.token);",
+                  "} catch (e) {}",
+                  "pm.test('Status 200', () => pm.response.to.have.status(200));"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"your-password\"\n}"
+            },
+            "url": "{{base_url}}/api/auth/login",
+            "description": "Replace email/password with values from your `.env`. Response stores JWT in collection variable `token`."
+          },
+          "response": [
+            {
+              "name": "200 Sample",
+              "originalRequest": {
+                "method": "POST",
+                "header": [{ "key": "Content-Type", "value": "application/json" }],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"email\": \"admin@example.com\",\n  \"password\": \"secret\"\n}"
+                },
+                "url": "{{base_url}}/api/auth/login"
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "body": "{\n  \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...\",\n  \"tokenType\": \"Bearer\",\n  \"user\": {\n    \"email\": \"admin@example.com\",\n    \"username\": \"admin\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET Me (profile)",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+            },
+            "method": "GET",
+            "header": [],
+            "url": "{{base_url}}/api/auth/me"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Pages",
+      "auth": {
+        "type": "bearer",
+        "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+      },
+      "item": [
+        {
+          "name": "GET List pages",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/pages" },
+          "response": [
+            {
+              "name": "200 Sample",
+              "originalRequest": { "method": "GET", "header": [], "url": "{{base_url}}/api/pages" },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "body": "{\n  \"success\": true,\n  \"data\": [\n    {\n      \"id\": \"1\",\n      \"page_name\": \"home\",\n      \"created_at\": \"2026-01-01T12:00:00.000Z\",\n      \"updated_at\": \"2026-01-01T12:00:00.000Z\"\n    }\n  ],\n  \"count\": 1\n}"
+            }
+          ]
+        },
+        {
+          "name": "GET Page by id",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/pages/{{page_id}}" },
+          "response": []
+        },
+        {
+          "name": "POST Create page",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page_name\": \"about-us\"\n}"
+            },
+            "url": "{{base_url}}/api/pages"
+          },
+          "response": [
+            {
+              "name": "201 Sample",
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": \"2\",\n    \"page_name\": \"about-us\",\n    \"created_at\": \"2026-01-01T12:00:00.000Z\",\n    \"updated_at\": \"2026-01-01T12:00:00.000Z\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "PUT Update page",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page_name\": \"about-us-v2\"\n}"
+            },
+            "url": "{{base_url}}/api/pages/{{page_id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE Page",
+          "request": { "method": "DELETE", "header": [], "url": "{{base_url}}/api/pages/{{page_id}}" },
+          "response": [
+            {
+              "name": "200 Sample",
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "body": "{\n  \"success\": true,\n  \"message\": \"Page deleted\",\n  \"data\": { \"id\": 1 }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Page sections",
+      "auth": {
+        "type": "bearer",
+        "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+      },
+      "item": [
+        {
+          "name": "GET List sections",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/page-sections" },
+          "response": []
+        },
+        {
+          "name": "GET Section by id",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/page-sections/{{section_id}}" },
+          "response": []
+        },
+        {
+          "name": "POST Create section",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"page_id\": 1,\n  \"section_name\": \"Hero banner\",\n  \"section_content\": \"<p>Welcome</p>\"\n}"
+            },
+            "url": "{{base_url}}/api/page-sections",
+            "description": "`page_id` must reference an existing row in `pages`."
+          },
+          "response": [
+            {
+              "name": "201 Sample",
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": \"1\",\n    \"section_name\": \"Hero banner\",\n    \"page_id\": \"1\",\n    \"section_content\": \"<p>Welcome</p>\",\n    \"created_time\": \"2026-01-01T12:00:00.000Z\",\n    \"updated_time\": \"2026-01-01T12:00:00.000Z\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "PUT Update section",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"section_name\": \"Hero banner\",\n  \"section_content\": \"<p>Updated</p>\"\n}"
+            },
+            "url": "{{base_url}}/api/page-sections/{{section_id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE Section",
+          "request": { "method": "DELETE", "header": [], "url": "{{base_url}}/api/page-sections/{{section_id}}" },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Page images",
+      "auth": {
+        "type": "bearer",
+        "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+      },
+      "item": [
+        {
+          "name": "GET List images",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/page-images" },
+          "response": []
+        },
+        {
+          "name": "GET Image by id",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/page-images/{{image_id}}" },
+          "response": []
+        },
+        {
+          "name": "POST Create image (URL)",
+          "request": {
+            "method": "POST",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"section_id\": 1,\n  \"image_url\": \"https://example.com/logo.png\"\n}"
+            },
+            "url": "{{base_url}}/api/page-images",
+            "description": "Create a row with an external or manual URL (no file upload)."
+          },
+          "response": []
+        },
+        {
+          "name": "POST Upload image (multipart)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "section_id",
+                  "value": "{{section_id}}",
+                  "type": "text",
+                  "description": "Must exist in page_section; folder path uses parent page_name + section_name."
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": [],
+                  "description": "jpg, jpeg, or png — max 1 MB"
+                }
+              ]
+            },
+            "url": "{{base_url}}/api/page-images/upload"
+          },
+          "response": [
+            {
+              "name": "201 Sample",
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": "json",
+              "header": [],
+              "body": "{\n  \"success\": true,\n  \"data\": {\n    \"id\": \"1\",\n    \"image_url\": \"about-us/hero-banner/1730000000000-abc12345.jpg\",\n    \"section_id\": \"1\",\n    \"created_time\": \"2026-01-01T12:00:00.000Z\",\n    \"updated_time\": \"2026-01-01T12:00:00.000Z\"\n  }\n}"
+            }
+          ]
+        },
+        {
+          "name": "PUT Update image (JSON URL)",
+          "request": {
+            "method": "PUT",
+            "header": [{ "key": "Content-Type", "value": "application/json" }],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"image_url\": \"https://example.com/new.png\"\n}"
+            },
+            "url": "{{base_url}}/api/page-images/{{image_id}}"
+          },
+          "response": []
+        },
+        {
+          "name": "PUT Replace image file (multipart)",
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": [],
+                  "description": "New file; old stored file under assets/ is removed when possible."
+                }
+              ]
+            },
+            "url": "{{base_url}}/api/page-images/{{image_id}}",
+            "description": "Send as multipart/form-data with field `image` only. Previous file on disk is deleted if `image_url` pointed to a local assets path."
+          },
+          "response": []
+        },
+        {
+          "name": "DELETE Image",
+          "request": { "method": "DELETE", "header": [], "url": "{{base_url}}/api/page-images/{{image_id}}" },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "DB (protected)",
+      "auth": {
+        "type": "bearer",
+        "bearer": [{ "key": "token", "value": "{{token}}", "type": "string" }]
+      },
+      "item": [
+        {
+          "name": "GET DB health check",
+          "request": { "method": "GET", "header": [], "url": "{{base_url}}/api/db-health-check" },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
