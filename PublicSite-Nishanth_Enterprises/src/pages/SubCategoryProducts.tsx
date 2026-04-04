@@ -21,11 +21,11 @@ type UiProduct = {
   name: string;
   price: string;
   originalPrice: string;
-  discount: string;
   image: string;
   extraImages: string[];
-  isNew: boolean;
-  isBestSeller: boolean;
+  labelInHouse: boolean;
+  labelBranded: boolean;
+  hotColdLabel: "Hot" | "Cold" | null;
   description: string;
 };
 
@@ -35,11 +35,12 @@ function formatPrice(price: string | null) {
   return Number.isFinite(n) ? `Rs. ${n.toFixed(2)}` : `Rs. ${price}`;
 }
 
-function calcDiscount(original: string | null, offer: string | null) {
-  const o = Number.parseFloat(original ?? "");
-  const p = Number.parseFloat(offer ?? "");
-  if (!Number.isFinite(o) || !Number.isFinite(p) || o <= 0 || p >= o) return "";
-  return `${Math.round(((o - p) / o) * 100)}% OFF`;
+function hotColdLabelFromClassification(
+  c: CatalogProduct["classification"]
+): "Hot" | "Cold" | null {
+  if (c === "hot") return "Hot";
+  if (c === "cold") return "Cold";
+  return null;
 }
 
 function toUiProduct(p: CatalogProduct): UiProduct {
@@ -49,11 +50,11 @@ function toUiProduct(p: CatalogProduct): UiProduct {
     name: p.product_name,
     price: formatPrice(p.offer_price ?? p.original_price),
     originalPrice: formatPrice(p.original_price),
-    discount: calcDiscount(p.original_price, p.offer_price),
     image: images[0] ?? "",
     extraImages: images.slice(1),
-    isNew: p.is_new_product || p.classification === "inhouse",
-    isBestSeller: p.is_popular_product || p.classification === "branded",
+    labelInHouse: p.classification === "inhouse",
+    labelBranded: p.classification === "branded",
+    hotColdLabel: hotColdLabelFromClassification(p.classification),
     description: p.description ?? ""
   };
 }
@@ -271,13 +272,21 @@ const SubCategoryProducts = () => {
                           ) : (
                             <div className="w-full h-full flex items-center justify-center text-xs text-gray-400">No image</div>
                           )}
-                          <div className="absolute top-1 md:top-2 left-1 md:left-2">
-                            {product.isNew ? <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-medium mb-1">In-House</span> : null}
-                            {product.isBestSeller ? <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-medium">Branded</span> : null}
-                          </div>
-                          {product.discount ? (
+                          {product.labelInHouse || product.labelBranded ? (
+                            <div className="absolute top-1 md:top-2 left-1 md:left-2 flex flex-wrap gap-1 max-w-[70%]">
+                              {product.labelInHouse ? (
+                                <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-medium">In-House</span>
+                              ) : null}
+                              {product.labelBranded ? (
+                                <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-medium">Branded</span>
+                              ) : null}
+                            </div>
+                          ) : null}
+                          {product.hotColdLabel ? (
                             <div className="absolute top-1 md:top-2 right-1 md:right-2">
-                              <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">{product.discount}</span>
+                              <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                {product.hotColdLabel}
+                              </span>
                             </div>
                           ) : null}
                         </div>

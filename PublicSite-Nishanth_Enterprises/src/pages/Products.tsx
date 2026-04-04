@@ -19,11 +19,14 @@ type UiProduct = {
   name: string;
   price: string;
   originalPrice: string;
-  discount: string;
   image: string;
   extraImages: string[];
-  isNew: boolean;
-  isBestSeller: boolean;
+  /** CMS classification — show In-House badge only when inhouse */
+  labelInHouse: boolean;
+  /** CMS classification — show Branded badge only when branded */
+  labelBranded: boolean;
+  /** Red badge text only for hot/cold classification (no % discount label) */
+  hotColdLabel: "Hot" | "Cold" | null;
   description: string;
   categorySlug: string;
   subcategoryId: string;
@@ -51,11 +54,12 @@ function formatPrice(raw: string | null): string {
   return `Rs. ${n.toFixed(2)}`;
 }
 
-function computeDiscount(original: string | null, offer: string | null): string {
-  const o = Number.parseFloat(original ?? "");
-  const p = Number.parseFloat(offer ?? "");
-  if (!Number.isFinite(o) || !Number.isFinite(p) || o <= 0 || p >= o) return "";
-  return `${Math.round(((o - p) / o) * 100)}% OFF`;
+function hotColdLabelFromClassification(
+  c: CatalogProduct["classification"]
+): "Hot" | "Cold" | null {
+  if (c === "hot") return "Hot";
+  if (c === "cold") return "Cold";
+  return null;
 }
 
 function mapToUiProduct(row: CatalogProduct): UiProduct {
@@ -63,18 +67,16 @@ function mapToUiProduct(row: CatalogProduct): UiProduct {
   const main = images[0] ?? "";
   const extra = images.slice(1);
   const categorySlug = slugify(row.category_name ?? "");
-  const isInhouse = row.classification === "inhouse";
-  const isBranded = row.classification === "branded";
   return {
     id: Number.parseInt(row.id, 10),
     name: row.product_name,
     price: formatPrice(row.offer_price ?? row.original_price),
     originalPrice: formatPrice(row.original_price),
-    discount: computeDiscount(row.original_price, row.offer_price),
     image: main,
     extraImages: extra,
-    isNew: row.is_new_product || isInhouse,
-    isBestSeller: row.is_popular_product || isBranded,
+    labelInHouse: row.classification === "inhouse",
+    labelBranded: row.classification === "branded",
+    hotColdLabel: hotColdLabelFromClassification(row.classification),
     description: row.description ?? "",
     categorySlug,
     subcategoryId: row.subcategory_id
@@ -388,13 +390,21 @@ const Products = () => {
                                   ) : (
                                     <div className="w-full h-full flex items-center justify-center text-gray-400 text-xs">No image</div>
                                   )}
-                                  <div className="absolute top-2 left-2">
-                                    {product.isNew ? <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-medium mb-1">In-House</span> : null}
-                                    {product.isBestSeller ? <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-medium">Branded</span> : null}
-                                  </div>
-                                  {product.discount ? (
+                                  {product.labelInHouse || product.labelBranded ? (
+                                    <div className="absolute top-2 left-2 flex flex-wrap gap-1 max-w-[70%]">
+                                      {product.labelInHouse ? (
+                                        <span className="bg-blue-500 text-white px-2 py-1 rounded-full text-xs font-medium">In-House</span>
+                                      ) : null}
+                                      {product.labelBranded ? (
+                                        <span className="bg-yellow-500 text-white px-2 py-1 rounded-full text-xs font-medium">Branded</span>
+                                      ) : null}
+                                    </div>
+                                  ) : null}
+                                  {product.hotColdLabel ? (
                                     <div className="absolute top-2 right-2">
-                                      <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">{product.discount}</span>
+                                      <span className="bg-red-500 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                        {product.hotColdLabel}
+                                      </span>
                                     </div>
                                   ) : null}
                                 </div>

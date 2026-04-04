@@ -1,13 +1,27 @@
-import { useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Phone, MessageCircle, ChevronRight, ChevronLeft, User, X, ShoppingCart } from 'lucide-react';
+import { Phone, MessageCircle, ChevronRight, X } from 'lucide-react';
 import menuData from '@/data/menuData.json';
+import {
+  fetchCatalogCategories,
+  fetchCatalogSubcategories,
+  type CatalogCategory,
+  type CatalogSubcategory
+} from '@/lib/catalogApi';
 
-interface SubCategory {
-  id: number;
+function slugify(name: string) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+}
+
+/** One column in the Products mega-menu: category header + subcategory lines from DB. */
+interface ProductMegaColumn {
+  id: string | number;
   name: string;
   link: string;
-  items?: string[];
+  categorySlug: string;
+  subcategories?: { id: string; name: string }[];
+  /** Fallback labels when catalog API is unavailable */
+  legacyItems?: string[];
 }
 
 interface MainMenu {
@@ -15,7 +29,34 @@ interface MainMenu {
   name: string;
   link: string;
   hasSubMenu: boolean;
-  subCategories?: SubCategory[];
+  subCategories?: ProductMegaColumn[];
+}
+
+function buildMegaMenuFromCatalog(
+  categories: CatalogCategory[],
+  subcategories: CatalogSubcategory[]
+): ProductMegaColumn[] {
+  const subsByCat = new Map<string, CatalogSubcategory[]>();
+  for (const s of subcategories) {
+    const arr = subsByCat.get(s.category_id) ?? [];
+    arr.push(s);
+    subsByCat.set(s.category_id, arr);
+  }
+  return [...categories]
+    .sort((a, b) => a.category_name.localeCompare(b.category_name))
+    .map((c) => {
+      const categorySlug = slugify(c.category_name);
+      const subs = (subsByCat.get(c.id) ?? []).sort((a, b) =>
+        a.subcategory_name.localeCompare(b.subcategory_name)
+      );
+      return {
+        id: c.id,
+        name: c.category_name,
+        link: `/products?category=${categorySlug}`,
+        categorySlug,
+        subcategories: subs.map((s) => ({ id: s.id, name: s.subcategory_name }))
+      };
+    });
 }
 
 const Header = () => {
@@ -23,9 +64,63 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(null);
   const [expandedSubMenu, setExpandedSubMenu] = useState<string | null>(null);
+  const [catalogMenuColumns, setCatalogMenuColumns] = useState<ProductMegaColumn[] | null>(null);
   const navigate = useNavigate();
 
-  const mainMenus: MainMenu[] = menuData.mainMenus;
+  useEffect(() => {
+    let active = true;
+    void Promise.all([fetchCatalogCategories(), fetchCatalogSubcategories()])
+      .then(([categories, subcategories]) => {
+        if (!active) return;
+        if (categories.length) {
+          setCatalogMenuColumns(buildMegaMenuFromCatalog(categories, subcategories));
+        } else {
+          setCatalogMenuColumns([]);
+        }
+      })
+      .catch(() => {
+        if (!active) return;
+        setCatalogMenuColumns(null);
+      });
+    return () => {
+      active = false;
+    };
+  }, []);
+
+  const mainMenus: MainMenu[] = useMemo(() => {
+    const base = menuData.mainMenus as MainMenu[];
+
+    function jsonColumnsToMega(
+      subCategories: NonNullable<MainMenu['subCategories']>
+    ): ProductMegaColumn[] {
+      return subCategories.map((sc) => {
+        const link = sc.link ?? '';
+        const q = link.match(/category=([^&]+)/);
+        const categorySlug = q ? q[1] : 'all';
+        const raw = sc as { items?: string[] };
+        return {
+          id: sc.id,
+          name: sc.name,
+          link,
+          categorySlug,
+          legacyItems: Array.isArray(raw.items) ? raw.items : undefined
+        };
+      });
+    }
+
+    return base.map((m) => {
+      if (m.name !== 'Products' || !m.hasSubMenu || !m.subCategories) {
+        return m;
+      }
+      if (catalogMenuColumns === null) {
+        return { ...m, subCategories: jsonColumnsToMega(m.subCategories) };
+      }
+      if (catalogMenuColumns.length > 0) {
+        return { ...m, subCategories: catalogMenuColumns };
+      }
+      return { ...m, subCategories: jsonColumnsToMega(m.subCategories) };
+    });
+  }, [catalogMenuColumns]);
 
   // Check if we're on the home page
   const isHomePage = window.location.pathname === '/';
@@ -45,78 +140,78 @@ const Header = () => {
     setExpandedSubMenu(null);
   };
 
-  const handleSubCategoryClick = (subCategory: SubCategory) => {
-    // Navigate directly to the subcategory link
-    navigate(subCategory.link);
-    // Close mobile menu after navigation
+  const closeMobileNav = () => {
     setIsMobileMenuOpen(false);
     setExpandedMobileMenu(null);
     setExpandedSubMenu(null);
   };
 
-  const handleItemClick = (subCategory: SubCategory, item: string) => {
-    // 3rd level items go to specific subcategory page
-    // Convert item name to slug format that matches JSON IDs
-    let itemSlug = item.toLowerCase()
-      .replace(/\s+/g, '-')  // Replace spaces with hyphens
-      .replace(/t-shirt/g, 'tshirt')  // Replace "t-shirt" with "tshirt"
-      .replace(/t-shirts/g, 'tshirts');  // Replace "t-shirts" with "tshirts"
-    
-    // Handle singular to plural mappings for subcategory IDs
+  const handleSubCategoryClick = (subCategory: ProductMegaColumn) => {
+    navigate(subCategory.link);
+    closeMobileNav();
+  };
+
+  /** DB-driven: same route shape as Products page (`/subcategory/:categorySlug/:subcategoryId`). */
+  const handleCatalogSubcategoryClick = (categorySlug: string, subcategoryId: string) => {
+    navigate(`/subcategory/${categorySlug}/${subcategoryId}`);
+    closeMobileNav();
+  };
+
+  /** Static JSON fallback when catalog API fails — legacy slug heuristics. */
+  const handleLegacyItemClick = (subCategory: ProductMegaColumn, item: string) => {
+    let itemSlug = item
+      .toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/t-shirt/g, 'tshirt')
+      .replace(/t-shirts/g, 'tshirts');
+
     const singularToPluralMap: { [key: string]: string } = {
-      'shirt': 'shirts',
-      'cap': 'caps',
-      'hoodie': 'hoodies',
-      'jersey': 'jersey',
-      'bag': 'bags',
-      'bottle': 'bottles',
-      'mug': 'mugs',
-      'pen': 'pens',
-      'notebook': 'notebooks',
-      'trophy': 'trophies',
-      'medal': 'medals',
+      shirt: 'shirts',
+      cap: 'caps',
+      hoodie: 'hoodies',
+      jersey: 'jersey',
+      bag: 'bags',
+      bottle: 'bottles',
+      mug: 'mugs',
+      pen: 'pens',
+      notebook: 'notebooks',
+      trophy: 'trophies',
+      medal: 'medals',
       'metal-cup': 'metal-cups',
       'corporate-metal-trophy': 'corporate-metal-trophies',
       'wooden-plaque': 'wooden-plaques',
       'card-holder': 'card-holders',
-      'speaker': 'bluetooth-speakers',
-      'watch': 'smart-watches',
-      'organizer': 'organizers',
+      speaker: 'bluetooth-speakers',
+      watch: 'smart-watches',
+      organizer: 'organizers',
       'gift-set': 'gift-sets',
-      'utility': 'utilities',
+      utility: 'utilities',
       'bluetooth-speakers': 'bluetooth-speakers',
       'power-banks': 'power-banks',
       'air-pods': 'air-pods',
       'smart-watches': 'smart-watches',
       'wrist-watches': 'wrist-watches',
-      'bands': 'bands',
+      bands: 'bands',
       'pen-drives': 'pen-drives',
-      'accessories': 'accessories',
-      'clocks': 'clocks',
+      accessories: 'accessories',
+      clocks: 'clocks',
       'cups-and-flasks': 'cups',
       'eco-friendly-gadgets': 'eco-friendly-gadgets',
       'note-book': 'note-book',
       'stationary-kit': 'stationary-kit'
     };
-    
-    // Check if we need to convert singular to plural
+
     if (singularToPluralMap[itemSlug]) {
       itemSlug = singularToPluralMap[itemSlug];
     }
-    
-    // Extract category from subcategory link
+
     const categoryMatch = subCategory.link.match(/category=([^&]+)/);
     if (categoryMatch) {
-      const category = categoryMatch[1];
-      navigate(`/subcategory/${category}/${itemSlug}`);
+      navigate(`/subcategory/${categoryMatch[1]}/${itemSlug}`);
     } else {
-      // Fallback to subcategory link
       navigate(subCategory.link);
     }
-    // Close mobile menu after navigation
-    setIsMobileMenuOpen(false);
-    setExpandedMobileMenu(null);
-    setExpandedSubMenu(null);
+    closeMobileNav();
   };
 
   const handleWhatsAppClick = () => {
@@ -155,7 +250,7 @@ const Header = () => {
     }
   };
 
-  const handleSubMenuToggle = (menuName: string, subCategoryId: number) => {
+  const handleSubMenuToggle = (menuName: string, subCategoryId: string | number) => {
     const subMenuKey = `${menuName}-${subCategoryId}`;
     if (expandedSubMenu === subMenuKey) {
       setExpandedSubMenu(null);
@@ -237,19 +332,36 @@ const Header = () => {
                               className="flex items-center text-black font-semibold hover:text-gray-600 transition-colors group cursor-pointer"
                             >
                               {subCategory.name}
-                              {subCategory.items && subCategory.items.length > 0 && (
+                              {((subCategory.subcategories?.length ?? 0) > 0 ||
+                                (subCategory.legacyItems?.length ?? 0) > 0) && (
                                 <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                               )}
                             </Link>
-                            {subCategory.items && (
+                            {subCategory.subcategories && subCategory.subcategories.length > 0 ? (
                               <div className="space-y-2">
-                                {subCategory.items.map((item, index) => (
+                                {subCategory.subcategories.map((sub) => (
+                                  <Link
+                                    key={sub.id}
+                                    to={`/subcategory/${subCategory.categorySlug}/${sub.id}`}
+                                    onClick={(e) => {
+                                      e.preventDefault();
+                                      handleCatalogSubcategoryClick(subCategory.categorySlug, sub.id);
+                                    }}
+                                    className="block text-gray-600 hover:text-black transition-colors text-sm cursor-pointer"
+                                  >
+                                    {sub.name}
+                                  </Link>
+                                ))}
+                              </div>
+                            ) : subCategory.legacyItems && subCategory.legacyItems.length > 0 ? (
+                              <div className="space-y-2">
+                                {subCategory.legacyItems.map((item, index) => (
                                   <Link
                                     key={index}
                                     to={`${subCategory.link}&item=${item.toLowerCase().replace(/\s+/g, '-')}`}
                                     onClick={(e) => {
                                       e.preventDefault();
-                                      handleItemClick(subCategory, item);
+                                      handleLegacyItemClick(subCategory, item);
                                     }}
                                     className="block text-gray-600 hover:text-black transition-colors text-sm cursor-pointer"
                                   >
@@ -257,7 +369,7 @@ const Header = () => {
                                   </Link>
                                 ))}
                               </div>
-                            )}
+                            ) : null}
                           </div>
                         ))}
                       </div>
@@ -391,10 +503,13 @@ const Header = () => {
                       
                       {expandedMobileMenu === menu.name && menu.subCategories && (
                         <div className="ml-4 space-y-2 animate-slideDown">
-                          {menu.subCategories.map((subCategory) => (
-                            <div key={subCategory.id} className="space-y-2">
-                              {subCategory.items && subCategory.items.length > 0 ? (
-                                // Sub-category with items
+                          {menu.subCategories.map((subCategory) => {
+                            const hasNested =
+                              (subCategory.subcategories?.length ?? 0) > 0 ||
+                              (subCategory.legacyItems?.length ?? 0) > 0;
+                            return (
+                            <div key={String(subCategory.id)} className="space-y-2">
+                              {hasNested ? (
                                 <div>
                                   <button
                                     onClick={() => handleSubMenuToggle(menu.name, subCategory.id)}
@@ -416,12 +531,23 @@ const Header = () => {
                                     />
                                   </button>
                                   
-                                  {expandedSubMenu === `${menu.name}-${subCategory.id}` && subCategory.items && (
+                                  {expandedSubMenu === `${menu.name}-${subCategory.id}` && (
                                     <div className="ml-4 space-y-1 animate-slideDown">
-                                      {subCategory.items.map((item, index) => (
+                                      {subCategory.subcategories?.map((sub) => (
                                         <button
-                                          key={index}
-                                          onClick={() => handleItemClick(subCategory, item)}
+                                          key={sub.id}
+                                          onClick={() =>
+                                            handleCatalogSubcategoryClick(subCategory.categorySlug, sub.id)
+                                          }
+                                          className="block w-full text-left py-2 px-4 text-xs text-gray-600 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
+                                        >
+                                          {sub.name}
+                                        </button>
+                                      ))}
+                                      {subCategory.legacyItems?.map((item, index) => (
+                                        <button
+                                          key={`legacy-${index}`}
+                                          onClick={() => handleLegacyItemClick(subCategory, item)}
                                           className="block w-full text-left py-2 px-4 text-xs text-gray-600 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
                                         >
                                           {item}
@@ -431,7 +557,6 @@ const Header = () => {
                                   )}
                                 </div>
                               ) : (
-                                // Sub-category without items
                                 <button
                                   onClick={() => handleSubCategoryClick(subCategory)}
                                   className="block w-full text-left py-2 px-4 text-sm text-gray-700 hover:text-black hover:bg-gray-50 rounded-lg transition-colors"
@@ -440,7 +565,8 @@ const Header = () => {
                                 </button>
                               )}
                             </div>
-                          ))}
+                            );
+                          })}
                         </div>
                       )}
                     </div>

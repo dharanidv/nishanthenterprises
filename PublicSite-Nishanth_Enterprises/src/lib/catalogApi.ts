@@ -86,6 +86,28 @@ export function toPublicImageUrl(imageUrl: string) {
   return `${API_BASE}/assets/${imageUrl}`;
 }
 
+/** Same slug rules as Products / category links. */
+export function slugifyCategoryName(name: string) {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
+}
+
+export function formatPriceRs(price: string | null): string {
+  if (!price) return "";
+  const n = Number.parseFloat(price);
+  return Number.isFinite(n) ? `Rs. ${n.toFixed(2)}` : `Rs. ${price}`;
+}
+
+/** First image by `display_order`, then `id`. */
+export function firstProductImageUrl(product: CatalogProduct): string {
+  const imgs = product.images ?? [];
+  if (!imgs.length) return "";
+  const sorted = [...imgs].sort((a, b) => {
+    if (a.display_order !== b.display_order) return a.display_order - b.display_order;
+    return a.id.localeCompare(b.id);
+  });
+  return toPublicImageUrl(sorted[0].image_url);
+}
+
 export async function fetchCatalogCategories() {
   return apiGet<CatalogCategory[]>("/api/public/catalog/categories");
 }
@@ -99,12 +121,24 @@ export async function fetchCatalogSubcategories(categoryId?: string) {
 export async function fetchCatalogProducts(params?: {
   categoryId?: string;
   subcategoryId?: string;
+  isNewProduct?: boolean;
+  isPopularProduct?: boolean;
 }) {
+  const isNew =
+    params?.isNewProduct === true ? "true" : params?.isNewProduct === false ? "false" : undefined;
+  const isPopular =
+    params?.isPopularProduct === true
+      ? "true"
+      : params?.isPopularProduct === false
+        ? "false"
+        : undefined;
   return apiGet<CatalogProduct[]>(
     `/api/public/catalog/products${toQueryString({
       include_images: "true",
       category_id: params?.categoryId,
-      subcategory_id: params?.subcategoryId
+      subcategory_id: params?.subcategoryId,
+      is_new_product: isNew,
+      is_popular_product: isPopular
     })}`
   );
 }
